@@ -4,39 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tony Jin — Chemistry Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- ── 🛠️ CACHE-PROOF SPLIT LAYOUT ENGINE ── -->
+    <style>
+        @import url('https://googleapis.com');
+
+        :root {
+            --primary: #0f5132;        /* Premium Lab Emerald Green */
+            --primary-light: #d1e7dd;  /* Soft Green Background Accent Tint */
+            --accent: #198754;         /* Interaction Link Green */
+            --dark: #212529;           /* Charcoal Text Element Color */
+            --light: #f8f9fa;          /* Crisp Alternating Panel Strip */
+            --white: #ffffff;
+            --gray: #6c757d;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--dark);
+            background-color: var(--white);
+            overflow: hidden; /* Locks outer browser window scrollbars */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .portfolio-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* 🟢 LEFT HAND SIDEBAR PANEL (25% Width) */
+        .left-sidebar {
+            flex: 0 0 25%; 
+            background-color: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 2.5rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar-inner {
+            text-align: center;
+            width: 100%;
+        }
+
+        .nav-brand {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            display: block;
+            margin-bottom: 2rem;
+        }
+
+        .hero-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            border: 4px solid var(--white);
+            margin-bottom: 3.5rem;
+        }
+
+        .nav-links-vertical {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .nav-links-vertical a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            display: block;
+            padding: 0.2rem 0;
+        }
+
+        .nav-links-vertical a:hover {
+            color: var(--white);
+            transform: translateX(6px);
+        }
+
+        /* ⚪ RIGHT HAND CONTENT PANEL (75% Width) */
+        .right-content-track {
+            flex: 0 0 75%; 
+            height: 100vh;
+            overflow-y: scroll; /* Handles seamless internal sliding scrollbars */
+            padding: 0;
+            scroll-behavior: smooth; /* Active animated slide gliding */
+        }
+
+        .scroll-section {
+            width: 100%;
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            padding: 6rem 5.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .scroll-section:nth-child(even) { background-color: var(--light); }
+        .section-content { width: 100%; max-width: 850px; }
+        
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            color: var(--primary);
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.6rem;
+        }
+
+        .section-content h1 { font-family: var(--font-serif); font-size: 3.8rem; color: var(--dark); margin-bottom: 1.5rem; }
+        .section-content h1 span { color: var(--primary); font-style: italic; }
+        .lead-text { font-size: 1.25rem; color: var(--gray); line-height: 1.75; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+        
+        .card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-color: rgba(15, 81, 50, 0.2); }
+        .card h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--dark); margin-bottom: 0.6rem; }
+        .card p { color: var(--gray); font-size: 0.98rem; line-height: 1.65; }
+        .tag { display: inline-block; background-color: var(--primary-light); color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.5px; }
+        .tech-list { margin-top: 1.2rem; font-size: 0.92rem; color: var(--dark); }
+        .btn { display: inline-block; padding: 0.8rem 2.2rem; background-color: var(--primary); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 500; transition: var(--transition); border: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(15, 81, 50, 0.15); }
+        .btn:hover { background-color: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(25, 135, 84, 0.25); }
+        .text-center { text-align: center; }
+        .track-footer { padding: 3rem 5.5rem; background-color: var(--dark); color: rgba(255,255,255,0.4); font-size: 0.85rem; text-align: center; }
+
+        @media (max-width: 950px) {
+            body { overflow: auto; }
+            .portfolio-container { flex-direction: column; height: auto; }
+            .left-sidebar { flex: 0 0 100%; width: 100%; height: auto; padding: 4rem 2rem; position: relative; }
+            .right-content-track { flex: 0 0 100%; width: 100%; height: auto; }
+            .scroll-section { min-height: auto; padding: 5rem 2rem; }
+            .hero-photo { margin-bottom: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ── Main Dual Column Container ── -->
     <main class="portfolio-container">
         
-        <!-- 🟢 LEFT SIDEBAR PANEL (Smaller Control Station) ── -->
+        <!-- LEFT SIDEBAR PANEL -->
         <aside class="left-sidebar">
             <div class="sidebar-inner">
                 <span class="nav-brand">Tony Jin</span>
-                
-                <!-- 📸 PHOTO: Ensure filename matches your images/ folder exactly -->
                 <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
-                
-                <!-- ── Navigation Menu (Tied directly to the right track IDs) ── -->
                 <nav class="side-nav">
                     <ul class="nav-links-vertical">
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#resume">Resume</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </aside>
-
-        <!-- ⚪ RIGHT SIDE PANEL (Much Larger Content Description Track) ── -->
+                <!-- ⚪ RIGHT CONTINUOUS SCROLL TRACK -->
         <section class="right-content-track">
             
-            <!-- 1. ABOUT DESCRIPTION -->
+            <!-- SECTION 1: ABOUT -->
             <article id="about" class="scroll-section">
                 <div class="section-content">
                     <h1>Hi, I'm <span>Tony</span></h1>
@@ -45,31 +194,12 @@
                     </p>
                     <div class="card" style="margin-top: 2rem;">
                         <h3>Academic Profile Summary</h3>
-                        <p>I am a final-year Chemistry student at Binghamton University with a strong foundation in laboratory methodologies. I enjoy bridging the gap between theoretical chemical concepts and practical, hands-on experimentation.</p>
+                        <p>[Enter a few sentences about your background, transfer journey, or what fields of chemistry excite you most here.]</p>
                     </div>
                 </div>
             </article>
 
-            <!-- 2. EXPERIENCE DESCRIPTION -->
-            <article id="experience" class="scroll-section">
-                <div class="section-content">
-                    <h2 class="section-title">Experience &amp; Education</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <h3>B.S. in Chemistry</h3>
-                            <p class="meta-text">Binghamton University &middot; Expected Graduation: 2026</p>
-                            <p><strong>Transfer Status:</strong> Undergraduate Transfer Student</p>
-                        </div>
-                        <div class="card">
-                            <h3>[LAB WORK OR JOB TITLE]</h3>
-                            <p class="meta-text">[COMPANY OR INSTITUTION NAME] &middot; [DATES]</p>
-                            <p>[Enter 2-3 sentences here outlining your day-to-day work, lab technician responsibilities, or academic assistant achievements.]</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 3. PROJECTS DESCRIPTION -->
+            <!-- SECTION 2: PROJECTS -->
             <article id="projects" class="scroll-section">
                 <div class="section-content">
                     <h2 class="section-title">Laboratory Projects</h2>
@@ -90,33 +220,22 @@
                 </div>
             </article>
 
-            <!-- 4. SKILLS DESCRIPTION -->
-            <article id="skills" class="scroll-section">
-                <div class="section-content">
-                    <h2 class="section-title">Technical Toolkits</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <h3>Laboratory Instruments</h3>
-                            <p>[List all hardware and software equipment tools you have practical experience with here, e.g., GC-MS, FTIR spectrophotometers, centrifuges, distillation columns.]</p>
-                        </div>
-                        <div class="card">
-                            <h3>Methodologies & Compliance</h3>
-                            <p>[List your practical skillsets and safety standards here, e.g., Titrations, solvent extractions, chemical crystallization, chemical hazardous waste mitigation, OSHA protocols.]</p>
-                        </div>
+            <!-- SECTION 3: RESUME -->
+            <article id="resume" class="scroll-section">
+                <div class="section-content text-center">
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                    <p style="margin-bottom: 2.5rem; color: var(--gray);">
+                        My complete professional timeline, academic background, laboratory experience, technical toolkits, and academic awards are compiled within my formal curriculum vitae.
+                    </p>
+                    <div class="card" style="padding: 3rem 2rem; max-width: 600px; margin: 0 auto;">
+                        <h3>Official Resume Document</h3>
+                        <p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--gray);">Click the button below to view or print my full document tracking my education at Binghamton, hardware instrumentation competencies, and awards history.</p>
+                        <a href="resume.pdf" target="_blank" class="btn">Download Official Resume (PDF)</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 5. RESUME LINK PANEL -->
-            <article id="resume" class="scroll-section">
-                <div class="section-content text-center">
-                    <h2 class="section-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2.5rem; color: var(--gray);">Access my complete, formal chronological history, references, and publications in a single printable dashboard format.</p>
-                    <a href="[LINK_TO_YOUR_RESUME_PDF.pdf]" target="_blank" class="btn">Download Official Resume (PDF)</a>
-                </div>
-            </article>
-
-            <!-- 6. CONTACT DESCRIPTION -->
+            <!-- SECTION 4: CONTACT -->
             <article id="contact" class="scroll-section">
                 <div class="section-content">
                     <h2 class="section-title">Get In Touch</h2>
@@ -124,12 +243,12 @@
                         <h3>Contact Information</h3>
                         <p style="margin-bottom: 0.8rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
                         <p style="margin-bottom: 0.8rem;"><strong>Location:</strong> Binghamton, NY</p>
-                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, analytical positions, research collaborations, or industry internships.</p>
+                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industrial internships.</p>
                     </div>
                 </div>
             </article>
 
-            <!-- Small Tracking Footer -->
+            <!-- Layout Track Footer Element -->
             <footer class="track-footer">
                 <p>Tony Jin E-Portfolio &copy; Built with plain HTML &amp; CSS &mdash; Hosted via GitHub Pages.</p>
             </footer>
