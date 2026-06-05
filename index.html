@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tony Jin — E-Portfolio</title>
+    <title>Tony Jin — Chemistry Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- ── Main Screen Slide Container ── -->
-    <main class="slide-container">
+    <!-- ── Main Split Screen Container ── -->
+    <main class="portfolio-container">
         
-        <!-- LEFT SIDE: Fixed Dashboard Panel (Color Background) -->
-        <aside class="left-dashboard">
-            <div class="dashboard-inner">
+        <!-- 🟢 LEFT SIDEBAR: Fixed Profile Panel -->
+        <aside class="left-sidebar">
+            <div class="sidebar-inner">
                 <span class="nav-brand">Tony Jin</span>
                 
-                <!-- 📸 PHOTO: Ensure this matches your file name exactly -->
+                <!-- 📸 PHOTO: Ensure your image file is inside your images folder -->
                 <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
                 
-                <!-- ── Navigation Menu (Tied to the slideshow cards) ── -->
+                <!-- ── Continuous Scroll Navigation Menu ── -->
                 <nav class="side-nav">
                     <ul class="nav-links-vertical">
-                        <li><a href="#about" class="active">About Me</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#awards">Awards</a></li>
                         <li><a href="#resume">Resume</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -35,107 +32,96 @@
             </div>
         </aside>
 
-        <!-- RIGHT SIDE: The Slideshow Track -->
-        <section class="right-slideshow-track">
+        <!-- ⚪ RIGHT SIDE: Single Page Scrolling Track -->
+        <section class="right-content-track">
             
-            <!-- CARD 1: ABOUT ME -->
-            <article id="about" class="slide-card hero-slide">
-                <div class="card-content">
+            <!-- SECTION 1: HOME -->
+            <article id="home" class="scroll-section">
+                <div class="section-content">
                     <h1>Hi, I'm <span>Tony</span></h1>
                     <p class="lead-text">
-                        Undergrad transfer student majoring in Chemistry at Binghamton University [2026]. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
+                        Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
                     </p>
-                    <p>[ENTER A SHORT SUMMARY ABOUT YOUR TRANSFER JOURNEY OR SCIENTIFIC MISSION HERE]</p>
-                </div>
-            </article>
-
-            <!-- CARD 2: EDUCATION -->
-            <article id="education" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Education</h2>
-                    <div class="info-block">
-                        <h3>B.S. in Chemistry</h3>
-                        <p class="meta-text">Binghamton University &middot; Expected Graduation: 2026</p>
-                        <p><strong>Transfer Status:</strong> Undergrad Transfer Student</p>
-                        <p style="margin-top: 1rem;"><strong>Relevant Coursework:</strong> [LIST KEY CLASSES, e.g., Analytical Chemistry, Instrumental Analysis, Organic Chemistry Lab]</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- CARD 3: EXPERIENCE -->
-            <article id="experience" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Experience</h2>
-                    <div class="info-block">
-                        <h3>[JOB OR LAB TITLE, e.g., Undergraduate Laboratory Assistant]</h3>
-                        <p class="meta-text">[COMPANY OR LAB NAME] &middot; [DATE RANGE]</p>
-                        <p>[ENTER 2-3 SENTENCES HIGHLIGHTING YOUR MAIN DUTIES, LAB RESPONSIBILITIES, OR QUALITY ASSURANCE WORK HERE]</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- CARD 4: PROJECTS -->
-            <article id="projects" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Laboratory Projects</h2>
-                    <div class="info-block">
-                        <h3>[CHEMISTRY PROJECT TITLE, e.g., Quantitative Spectroscopic Assay]</h3>
-                        <p class="meta-text">Academic Lab Focus</p>
-                        <p>[ENTER A BRIEF OVERVIEW DESCRIBING YOUR EXPERIMENT GOAL, METHODS USED, AND KEY ACADEMIC FINDINGS]</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- CARD 5: SKILLS -->
-            <article id="skills" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Technical Skills</h2>
-                    <div class="skills-grid">
-                        <div class="sub-card">
-                            <h3>Laboratory Instrumentation</h3>
-                            <p>[LIST EQUIPMENT, e.g., UV-Vis Spectroscopy, FTIR, HPLC, Gas Chromatography]</p>
+                    
+                    <div class="grid" style="margin-top: 3rem;">
+                        <div class="card">
+                            <h3>Academic Background</h3>
+                            <p>I am a final-year Chemistry student at Binghamton University with a strong foundation in laboratory methodologies. I enjoy bridging the gap between theoretical chemical concepts and practical, hands-on experimentation.</p>
                         </div>
-                        <div class="sub-card">
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 2: PROJECTS -->
+            <article id="projects" class="scroll-section">
+                <div class="section-content">
+                    <h2 class="section-title">Technical Projects</h2>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <span class="tag">Analytical Chemistry</span>
+                            <h3>Quantitative Analysis & Spectroscopy</h3>
+                            <p>Conducted precise quantitative analysis of unknown chemical samples using standard analytical instrumentation. Handled sample preparation, standard curves calculation, and error analysis.</p>
+                            <p class="tech-list"><strong>Instrumentation:</strong> UV-Vis Spectroscopy, FTIR, HPLC</p>
+                        </div>
+
+                        <div class="card">
+                            <span class="tag">Organic Chemistry</span>
+                            <h3>Multi-Step Organic Synthesis</h3>
+                            <p>Executed complex multi-step organic synthesis procedures targeting pure organic compounds. Mastered purification techniques to maximize compound percent yield and isolated purity.</p>
+                            <p class="tech-list"><strong>Methodologies:</strong> Reflux, Thin-Layer Chromatography (TLC), Recrystallization</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 3: SKILLS -->
+            <article id="skills" class="scroll-section">
+                <div class="section-content">
+                    <h2 class="section-title">Technical Skills</h2>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Laboratory Hardware</h3>
+                            <p>[LIST INSTRUMENTS YOU OPERATE, e.g., UV-Vis Spectroscopy, FTIR, HPLC, Gas Chromatography, Distillation Rig]</p>
+                        </div>
+                        <div class="card">
                             <h3>Methodologies & Safety</h3>
-                            <p>[LIST METHODOLOGIES, e.g., Titration, Organic Synthesis, Distillation, Waste Management, OSHA Compliance]</p>
+                            <p>[LIST METHODOLOGIES, e.g., Titration, Acid-Base Extraction, Waste Management, OSHA Compliance, MSDS Handling]</p>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- CARD 6: AWARDS -->
-            <article id="awards" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Awards & Honors</h2>
-                    <div class="info-block">
-                        <h3>[AWARD NAME, e.g., Dean's List or Scholarship Title]</h3>
-                        <p class="meta-text">[ISSUING BODY OR UNIVERSITY] &middot; [YEAR]</p>
-                        <p>[ENTER A BRIEF ONE-SENTENCE DESCRIPTION OF WHAT THE AWARD RECOGNIZES OR SELECTIVE CRITERIA HERE]</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- CARD 7: RESUME -->
-            <article id="resume" class="slide-card">
-                <div class="card-content text-center">
-                    <h2 class="slide-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2rem;">Access my full professional timeline, technical toolkits, and academic history in a printable layout.</p>
+            <!-- SECTION 4: RESUME -->
+            <article id="resume" class="scroll-section">
+                <div class="section-content text-center">
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                    <p style="margin-bottom: 2rem; color: var(--gray);">Access my complete professional timeline, technical toolkits, and academic history in a printable format.</p>
                     <a href="[LINK_TO_YOUR_RESUME_PDF.pdf]" target="_blank" class="btn">Download Official Resume (PDF)</a>
                 </div>
             </article>
 
-            <!-- CARD 8: CONTACT -->
-            <article id="contact" class="slide-card">
-                <div class="card-content">
-                    <h2 class="slide-title">Get In Touch</h2>
-                    <div class="info-block">
-                        <h3>Contact Information</h3>
-                        <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
-                        <p style="margin-bottom: 0.5rem;"><strong>Location:</strong> Binghamton, NY</p>
-                        <p style="margin-top: 1rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industry internships.</p>
+            <!-- SECTION 5: CONTACT -->
+            <article id="contact" class="scroll-section">
+                <div class="section-content">
+                    <h2 class="section-title">Get In Touch</h2>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Contact Information</h3>
+                            <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
+                            <p style="margin-bottom: 0.5rem;"><strong>Location:</strong> Binghamton, NY</p>
+                            <p style="margin-top: 1rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industry internships.</p>
+                        </div>
                     </div>
                 </div>
             </article>
+
+            <!-- Embedded Small Footer -->
+            <footer class="track-footer">
+                <p>Built with plain HTML &amp; CSS &mdash; Hosted free on GitHub Pages.</p>
+            </footer>
 
         </section>
     </main>
