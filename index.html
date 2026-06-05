@@ -3,105 +3,146 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tony Jin — Chemistry Portfolio</title>
-    <!-- ⚠️ Note the new style path link below to bypass your old memory cache -->
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Tony Jin — Split Layout Test</title>
+    
+    <!-- ── 🛠️ Self-Contained Layout Engine (Cache-Proof) ── -->
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevents the outer browser window from double-scrolling */
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* This container forces the 2-column split screen */
+        .portfolio-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* 🟢 LEFT SIDEBAR (Fixed 25% width, green background) */
+        .left-sidebar {
+            flex: 0 0 25%; 
+            background-color: #0f5132; /* Deep Emerald Green */
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 2rem;
+        }
+
+        .sidebar-inner {
+            text-align: center;
+            width: 100%;
+        }
+
+        .sidebar-inner h2 {
+            margin-bottom: 2rem;
+        }
+
+        .nav-links-vertical {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .nav-links-vertical a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .nav-links-vertical a:hover {
+            color: #ffffff;
+        }
+
+        /* ⚪ RIGHT PANEL TRACK (Scrollable 75% width) */
+        .right-content-track {
+            flex: 0 0 75%; 
+            height: 100vh;
+            overflow-y: scroll; /* Activates scrolling ONLY on the right panel */
+            scroll-behavior: smooth; /* Triggers the smooth glide animation */
+        }
+
+        /* Test Section Blocks */
+        .scroll-section {
+            width: 100%;
+            height: 100vh; /* Every section matches the exact screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+        }
+
+        /* Gives alternate sections a light gray background so you can see them change */
+        .scroll-section:nth-child(even) {
+            background-color: #f8f9fa; 
+        }
+
+        .section-content h1 {
+            font-size: 3rem;
+            color: #212529;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ── Main Dual Column Container ── -->
+    <!-- Main Dual Column Layout Wrapper -->
     <main class="portfolio-container">
         
-        <!-- 🟢 LEFT SIDEBAR PANEL (25% Width) ── -->
+        <!-- LEFT SIDEBAR PANEL -->
         <aside class="left-sidebar">
             <div class="sidebar-inner">
-                <span class="nav-brand">Tony Jin</span>
+                <h2>Tony Jin</h2>
                 
-                <!-- 📸 PHOTO: Ensure filename matches your images/ folder exactly -->
-                <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
-                
-                <!-- ── Navigation Menu (Exactly 4 Core Sections Only) ── -->
                 <nav class="side-nav">
                     <ul class="nav-links-vertical">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#section1">About</a></li>
+                        <li><a href="#section2">Projects</a></li>
+                        <li><a href="#section3">Resume</a></li>
+                        <li><a href="#section4">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </aside>
 
-        <!-- ⚪ RIGHT SIDE PANEL (75% Width Content Track) ── -->
+        <!-- RIGHT CONTENT TRACK -->
         <section class="right-content-track">
             
-            <!-- SECTION 1: ABOUT -->
-            <article id="about" class="scroll-section">
+            <article id="section1" class="scroll-section">
                 <div class="section-content">
-                    <h1>Hi, I'm <span>Tony</span></h1>
-                    <p class="lead-text">
-                        Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
-                    </p>
-                    <div class="card" style="margin-top: 2rem;">
-                        <h3>Academic Profile Summary</h3>
-                        <p>[Enter a few sentences about your background, transfer journey, or what fields of chemistry excite you most here.]</p>
-                    </div>
+                    <h1>[Section 1: About Panel Displayed]</h1>
                 </div>
             </article>
 
-            <!-- SECTION 2: PROJECTS -->
-            <article id="projects" class="scroll-section">
+            <article id="section2" class="scroll-section">
                 <div class="section-content">
-                    <h2 class="section-title">Laboratory Projects</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <span class="tag">Analytical Chemistry</span>
-                            <h3>Quantitative Analysis & Spectroscopy</h3>
-                            <p>Conducted precise quantitative analysis of unknown chemical samples using standard analytical instrumentation. Handled sample preparation, standard curves calculation, and error analysis.</p>
-                            <p class="tech-list"><strong>Instrumentation:</strong> UV-Vis Spectroscopy, FTIR, HPLC</p>
-                        </div>
-                        <div class="card">
-                            <span class="tag">Organic Chemistry</span>
-                            <h3>Multi-Step Organic Synthesis</h3>
-                            <p>Executed complex multi-step organic synthesis procedures targeting pure organic compounds. Mastered purification techniques to maximize compound percent yield and isolated purity.</p>
-                            <p class="tech-list"><strong>Methodologies:</strong> Reflux, Thin-Layer Chromatography (TLC), Recrystallization</p>
-                        </div>
-                    </div>
+                    <h1>[Section 2: Projects Panel Displayed]</h1>
                 </div>
             </article>
 
-            <!-- SECTION 3: RESUME -->
-            <article id="resume" class="scroll-section">
-                <div class="section-content text-center">
-                    <h2 class="section-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2.5rem; color: var(--gray);">
-                        My complete professional timeline, academic background, laboratory experience, technical toolkits, and academic awards are compiled within my formal curriculum vitae.
-                    </p>
-                    <div class="card" style="padding: 3rem 2rem; max-width: 600px; margin: 0 auto;">
-                        <h3>Official Resume Document</h3>
-                        <p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--gray);">Click the button below to view or print my full document tracking my education at Binghamton, hardware instrumentation competencies, and awards history.</p>
-                        <a href="resume.pdf" target="_blank" class="btn">Download Official Resume (PDF)</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- SECTION 4: CONTACT -->
-            <article id="contact" class="scroll-section">
+            <article id="section3" class="scroll-section">
                 <div class="section-content">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="card">
-                        <h3>Contact Information</h3>
-                        <p style="margin-bottom: 0.8rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
-                        <p style="margin-bottom: 0.8rem;"><strong>Location:</strong> Binghamton, NY</p>
-                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industrial internships.</p>
-                    </div>
+                    <h1>[Section 3: Resume Panel Displayed]</h1>
                 </div>
             </article>
 
-            <!-- Small Tracking Footer -->
-            <footer class="track-footer">
-                <p>Tony Jin E-Portfolio &copy; Built with plain HTML &amp; CSS &mdash; Hosted via GitHub Pages.</p>
-            </footer>
+            <article id="section4" class="scroll-section">
+                <div class="section-content">
+                    <h1>[Section 4: Contact Panel Displayed]</h1>
+                </div>
+            </article>
 
         </section>
     </main>
