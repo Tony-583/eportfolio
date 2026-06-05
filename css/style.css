@@ -3,12 +3,15 @@
    Students: change the 4 CSS variables below to retheme everything
    ============================================================ */
 
+/* ── Split Slide Stylesheet ── */
+@import url('https://googleapis.com');
+
 :root {
-    --primary: #0f5132;        /* Elegant Deep Emerald */
-    --primary-light: #d1e7dd;  /* Soft Green Tint */
-    --accent: #198754;         /* Bright Lab Green */
-    --dark: #212529;           /* Clean Off-Black */
-    --light: #f8f9fa;          /* Crisp Off-White */
+    --primary: #0f5132;        /* [COLOR MATCH: Elegant Deep Emerald Green] */
+    --primary-light: #d1e7dd;  /* [COLOR MATCH: Soft Green Tint Accent] */
+    --accent: #198754;         /* [COLOR MATCH: Bright Interactive Lab Green] */
+    --dark: #212529;           /* [COLOR MATCH: Dark Background Typography Gray] */
+    --light: #f8f9fa;          /* [COLOR MATCH: Light Clean Off-White Surface] */
     --white: #ffffff;
     --gray: #6c757d;
     --font-sans: 'Inter', sans-serif;
@@ -16,187 +19,56 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: var(--font-sans);
     color: var(--dark);
     background-color: var(--white);
-    line-height: 1.6;
+    overflow: hidden; /* Locks browser window scroll behavior */
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* ── Navigation Bar ── */
-nav {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.nav-inner {
+/* ── Split Layout Engine ── */
+.slide-container {
     display: flex;
-    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Left Panel - Fixed Profile Image Card */
+.profile-panel {
+    flex: 0 0 40%; 
+    background: linear-gradient(135deg, var(--white) 30%, var(--primary-light) 100%);
+    display: flex;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.2rem 5%;
+    justify-content: center;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.panel-inner {
+    text-align: center;
+    padding: 2rem;
 }
 
 .nav-brand {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
-    letter-spacing: -0.5px;
+    display: block;
+    margin-bottom: 2rem;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--gray);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: var(--transition);
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--primary);
-}
-
-#nav-toggle, .nav-toggle-label {
-    display: none; /* Hidden on desktop */
-}
-
-/* ── Hero Section ── */
-.hero {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--white) 60%, var(--primary-light) 100%);
-    overflow: hidden;
-}
-
-.hero-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-text h1 {
-    font-family: var(--font-serif);
-    font-size: 3.5rem;
-    color: var(--dark);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-}
-
-.hero-text h1 span {
-    color: var(--primary);
-    font-style: italic;
-}
-
-.hero-text p {
-    font-size: 1.15rem;
-    color: var(--gray);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-}
-
-/* Fancy Interactive Buttons */
-.hero-btns {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    background-color: var(--primary);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: var(--transition);
-    border: 2px solid var(--primary);
-    box-shadow: 0 4px 15px rgba(15, 81, 50, 0.2);
-}
-
-.btn:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(25, 135, 84, 0.3);
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: var(--primary);
-    box-shadow: none;
-}
-
-.btn-outline:hover {
-    background-color: var(--primary-light);
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-/* Data Stats Counter */
-.stats {
-    display: flex;
-    gap: 3rem;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    padding-top: 1.5rem;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat strong {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.stat span {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gray);
-}
-
-/* Profile Photo Framing with Morph Animation */
 .hero-photo {
-    width: 320px;
-    height: 320px;
+    width: 260px;
+    height: 260px;
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border: 8px solid var(--white);
-    transition: var(--transition);
+    border: 6px solid var(--white);
     animation: morph 8s ease-in-out infinite alternate;
+    margin-bottom: 2.5rem;
 }
 
 @keyframes morph {
@@ -204,93 +76,63 @@ nav {
     100% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
 }
 
-/* ── Generic Sections & Grid ── */
-.section {
-    padding: 6rem 0;
-}
-
-.section-alt {
-    background-color: var(--light);
-}
-
-.section-title {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    text-align: center;
-    color: var(--dark);
-    margin-bottom: 0.5rem;
-}
-
-.section-sub {
-    text-align: center;
-    color: var(--gray);
-    margin-bottom: 4rem;
-    font-size: 1.05rem;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.stats {
+    display: flex;
+    justify-content: center;
     gap: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 1.5rem;
 }
 
-/* Fancy Layout Cards */
-.card {
-    background-color: var(--white);
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    border: 1px solid rgba(0,0,0,0.03);
-    transition: var(--transition);
+.stat { display: flex; flex-direction: column; }
+.stat strong { font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); }
+.stat span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); }
+
+/* Right Panel - Scrollable content track inside the slide */
+.content-panel {
+    flex: 0 0 60%; 
+    height: 100%;
+    overflow-y: auto; 
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    border-color: rgba(15, 81, 50, 0.2);
+.content-nav {
+    align-self: flex-end;
 }
 
-.card h3 {
-    font-family: var(--font-serif);
-    font-size: 1.35rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
 
-.card p {
-    color: var(--gray);
-    font-size: 0.98rem;
-}
+.content-block h1 { font-family: var(--font-serif); font-size: 3.5rem; color: var(--dark); margin-bottom: 1rem; }
+.content-block h1 span { color: var(--primary); font-style: italic; }
+.lead-text { font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem; max-width: 650px; line-height: 1.7; }
 
-/* ── Footer ── */
-footer {
-    background-color: var(--dark);
-    color: rgba(255,255,255,0.6);
-    padding: 4rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-}
+.hero-btns { display: flex; gap: 1rem; }
+.btn { display: inline-block; padding: 0.7rem 1.5rem; background-color: var(--primary); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 500; transition: var(--transition); border: 2px solid var(--primary); }
+.btn:hover { background-color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.btn-outline { background-color: transparent; color: var(--primary); }
+.btn-outline:hover { background-color: var(--primary-light); }
 
-footer a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-}
+.section-title-left { font-family: var(--font-serif); font-size: 2rem; color: var(--dark); margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; } 
 
-footer a:hover {
-    color: var(--primary-light);
-}
+.card { background-color: var(--light); padding: 1.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.02); transition: var(--transition); }
+.card:hover { transform: translateX(5px); border-color: rgba(15, 81, 50, 0.2); background-color: var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+.card h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem; }
+.card p { color: var(--gray); font-size: 0.95rem; }
 
-/* ── Responsive Tablet/Mobile Design ── */
-@media (max-width: 900px) {
-    .hero-inner {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-    }
-    .hero-text h1 { font-size: 2.8rem; }
-    .hero-btns { justify-content: center; }
-    .stats { justify-content: center; gap: 2rem; }
-    .hero-photo { width: 260px; height: 260px; }
+.slide-footer { margin-top: auto; padding-top: 3rem; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.85rem; color: var(--gray); display: flex; justify-content: space-between; }
+.slide-footer a { color: var(--dark); text-decoration: none; font-weight: 500; }
+
+/* Responsive break points for tablet screens and mobile viewports */
+@media (max-width: 850px) {
+    body { overflow: auto; }
+    .slide-container { flex-direction: column; height: auto; width: 100%; }
+    .profile-panel, .content-panel { flex: 0 0 100%; width: 100%; height: auto; }
+    .content-panel { padding: 2rem; gap: 3rem; }
+    .content-nav { align-self: center; margin-bottom: 1rem; }
 }
