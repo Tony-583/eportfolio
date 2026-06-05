@@ -8,21 +8,22 @@
 </head>
 <body>
 
-    <!-- ── Main Split Screen Container ── -->
+    <!-- ── Main Dual Column Container ── -->
     <main class="portfolio-container">
         
-        <!-- 🟢 LEFT SIDEBAR: Fixed Profile Panel -->
+        <!-- 🟢 LEFT SIDEBAR PANEL (Smaller Control Station) ── -->
         <aside class="left-sidebar">
             <div class="sidebar-inner">
                 <span class="nav-brand">Tony Jin</span>
                 
-                <!-- 📸 PHOTO: Ensure your image file is inside your images folder -->
+                <!-- 📸 PHOTO: Ensure filename matches your images/ folder exactly -->
                 <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
                 
-                <!-- ── Continuous Scroll Navigation Menu ── -->
+                <!-- ── Navigation Menu (Tied directly to the right track IDs) ── -->
                 <nav class="side-nav">
                     <ul class="nav-links-vertical">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#resume">Resume</a></li>
@@ -32,31 +33,46 @@
             </div>
         </aside>
 
-        <!-- ⚪ RIGHT SIDE: Single Page Scrolling Track -->
+        <!-- ⚪ RIGHT SIDE PANEL (Much Larger Content Description Track) ── -->
         <section class="right-content-track">
             
-            <!-- SECTION 1: HOME -->
-            <article id="home" class="scroll-section">
+            <!-- 1. ABOUT DESCRIPTION -->
+            <article id="about" class="scroll-section">
                 <div class="section-content">
                     <h1>Hi, I'm <span>Tony</span></h1>
                     <p class="lead-text">
                         Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
                     </p>
-                    
-                    <div class="grid" style="margin-top: 3rem;">
+                    <div class="card" style="margin-top: 2rem;">
+                        <h3>Academic Profile Summary</h3>
+                        <p>I am a final-year Chemistry student at Binghamton University with a strong foundation in laboratory methodologies. I enjoy bridging the gap between theoretical chemical concepts and practical, hands-on experimentation.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. EXPERIENCE DESCRIPTION -->
+            <article id="experience" class="scroll-section">
+                <div class="section-content">
+                    <h2 class="section-title">Experience &amp; Education</h2>
+                    <div class="grid">
                         <div class="card">
-                            <h3>Academic Background</h3>
-                            <p>I am a final-year Chemistry student at Binghamton University with a strong foundation in laboratory methodologies. I enjoy bridging the gap between theoretical chemical concepts and practical, hands-on experimentation.</p>
+                            <h3>B.S. in Chemistry</h3>
+                            <p class="meta-text">Binghamton University &middot; Expected Graduation: 2026</p>
+                            <p><strong>Transfer Status:</strong> Undergraduate Transfer Student</p>
+                        </div>
+                        <div class="card">
+                            <h3>[LAB WORK OR JOB TITLE]</h3>
+                            <p class="meta-text">[COMPANY OR INSTITUTION NAME] &middot; [DATES]</p>
+                            <p>[Enter 2-3 sentences here outlining your day-to-day work, lab technician responsibilities, or academic assistant achievements.]</p>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- SECTION 2: PROJECTS -->
+            <!-- 3. PROJECTS DESCRIPTION -->
             <article id="projects" class="scroll-section">
                 <div class="section-content">
-                    <h2 class="section-title">Technical Projects</h2>
-                    
+                    <h2 class="section-title">Laboratory Projects</h2>
                     <div class="grid">
                         <div class="card">
                             <span class="tag">Analytical Chemistry</span>
@@ -64,7 +80,6 @@
                             <p>Conducted precise quantitative analysis of unknown chemical samples using standard analytical instrumentation. Handled sample preparation, standard curves calculation, and error analysis.</p>
                             <p class="tech-list"><strong>Instrumentation:</strong> UV-Vis Spectroscopy, FTIR, HPLC</p>
                         </div>
-
                         <div class="card">
                             <span class="tag">Organic Chemistry</span>
                             <h3>Multi-Step Organic Synthesis</h3>
@@ -75,52 +90,48 @@
                 </div>
             </article>
 
-            <!-- SECTION 3: SKILLS -->
+            <!-- 4. SKILLS DESCRIPTION -->
             <article id="skills" class="scroll-section">
                 <div class="section-content">
-                    <h2 class="section-title">Technical Skills</h2>
-                    
+                    <h2 class="section-title">Technical Toolkits</h2>
                     <div class="grid">
                         <div class="card">
-                            <h3>Laboratory Hardware</h3>
-                            <p>[LIST INSTRUMENTS YOU OPERATE, e.g., UV-Vis Spectroscopy, FTIR, HPLC, Gas Chromatography, Distillation Rig]</p>
+                            <h3>Laboratory Instruments</h3>
+                            <p>[List all hardware and software equipment tools you have practical experience with here, e.g., GC-MS, FTIR spectrophotometers, centrifuges, distillation columns.]</p>
                         </div>
                         <div class="card">
-                            <h3>Methodologies & Safety</h3>
-                            <p>[LIST METHODOLOGIES, e.g., Titration, Acid-Base Extraction, Waste Management, OSHA Compliance, MSDS Handling]</p>
+                            <h3>Methodologies & Compliance</h3>
+                            <p>[List your practical skillsets and safety standards here, e.g., Titrations, solvent extractions, chemical crystallization, chemical hazardous waste mitigation, OSHA protocols.]</p>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- SECTION 4: RESUME -->
+            <!-- 5. RESUME LINK PANEL -->
             <article id="resume" class="scroll-section">
                 <div class="section-content text-center">
                     <h2 class="section-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2rem; color: var(--gray);">Access my complete professional timeline, technical toolkits, and academic history in a printable format.</p>
+                    <p style="margin-bottom: 2.5rem; color: var(--gray);">Access my complete, formal chronological history, references, and publications in a single printable dashboard format.</p>
                     <a href="[LINK_TO_YOUR_RESUME_PDF.pdf]" target="_blank" class="btn">Download Official Resume (PDF)</a>
                 </div>
             </article>
 
-            <!-- SECTION 5: CONTACT -->
+            <!-- 6. CONTACT DESCRIPTION -->
             <article id="contact" class="scroll-section">
                 <div class="section-content">
                     <h2 class="section-title">Get In Touch</h2>
-                    
-                    <div class="grid">
-                        <div class="card">
-                            <h3>Contact Information</h3>
-                            <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
-                            <p style="margin-bottom: 0.5rem;"><strong>Location:</strong> Binghamton, NY</p>
-                            <p style="margin-top: 1rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industry internships.</p>
-                        </div>
+                    <div class="card">
+                        <h3>Contact Information</h3>
+                        <p style="margin-bottom: 0.8rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
+                        <p style="margin-bottom: 0.8rem;"><strong>Location:</strong> Binghamton, NY</p>
+                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, analytical positions, research collaborations, or industry internships.</p>
                     </div>
                 </div>
             </article>
 
-            <!-- Embedded Small Footer -->
+            <!-- Small Tracking Footer -->
             <footer class="track-footer">
-                <p>Built with plain HTML &amp; CSS &mdash; Hosted free on GitHub Pages.</p>
+                <p>Tony Jin E-Portfolio &copy; Built with plain HTML &amp; CSS &mdash; Hosted via GitHub Pages.</p>
             </footer>
 
         </section>
