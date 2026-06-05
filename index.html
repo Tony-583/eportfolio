@@ -226,17 +226,87 @@
                 </div>
             </article>
 
-            <!-- SECTION 3: RESUME -->
+            <!-- SECTION 3: RESUME (Dual-Entry CV Track) -->
             <article id="resume" class="scroll-section">
-                <div class="section-content text-center">
-                    <h2 class="section-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2.5rem; color: var(--gray);">
-                        My complete professional timeline, academic background, laboratory experience, technical toolkits, and academic awards are compiled within my formal curriculum vitae.
-                    </p>
-                    <div class="card" style="padding: 3rem 2rem; max-width: 600px; margin: 0 auto;">
-                        <h3>Official Resume Document</h3>
-                        <p style="margin-bottom: 2rem; font-size: 0.95rem; color: var(--gray);">Click the button below to view or print my full document tracking my education at Binghamton, hardware instrumentation competencies, and awards history.</p>
-                        <a href="resume.pdf" target="_blank" class="btn">Download Official Resume (PDF)</a>
+                <div class="section-content">
+                    <h2 class="section-title">Resume</h2>
+                    
+                    <!-- Master Vertical Stack for Resume Categories -->
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;">
+                        
+                        <!-- 🎓 1. EDUCATION CARD (2 Entries) -->
+                        <div class="card" style="padding: 3rem; border-radius: 12px;">
+                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Education</h3>
+                            
+                            <!-- Entry 1 -->
+                            <div style="margin-bottom: 1.5rem;">
+                                <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">B.S. in Chemistry</p>
+                                <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem;">Binghamton University &middot; Expected Graduation: 2026</p>
+                                <p style="font-size: 0.95rem; color: var(--gray); margin-top: 0.25rem;">First-Year Transfer Student. Relevant Coursework: Organic Chemistry, Analytical Chemistry.</p>
+                            </div>
+                            
+                            <!-- Entry 2 -->
+                            <div>
+                                <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">[ENTER PREVIOUS DEGREE OR HIGH SCHOOL DIPLOMA HERE]</p>
+                                <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem;">[ENTER SCHOOL OR COLLEGE NAME HERE] &middot; [ENTER GRADUATION YEAR OR DATES HERE]</p>
+                                <p style="font-size: 0.95rem; color: var(--gray); margin-top: 0.25rem;">[Enter a short detail about your achievements, selective focus, or academic honors here.]</p>
+                            </div>
+                        </div>
+
+                        <!-- 🔬 2. EXPERIENCE CARD (2 Entries) -->
+                        <div class="card" style="padding: 3rem; border-radius: 12px;">
+                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Experience</h3>
+                            
+                            <!-- Entry 1 -->
+                            <div style="margin-bottom: 2rem;">
+                                <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">[ENTER JOB OR LAB ROLE 1 HERE, e.g., Laboratory Assistant]</p>
+                                <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-bottom: 0.5rem;">[ENTER LAB GROUP OR COMPANY NAME HERE] &middot; [ENTER DATE RANGE HERE, e.g., 2025 - Present]</p>
+                                <p style="font-size: 1.05rem; line-height: 1.65; color: var(--gray);">[Type 2-3 sentences here detailing your primary laboratory responsibilities, sample preparation workflows, or critical teamwork skills used.]</p>
+                            </div>
+                            
+                            <!-- Entry 2 -->
+                            <div>
+                                <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">[ENTER JOB OR PREVIOUS ROLE 2 HERE]</p>
+                                <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-bottom: 0.5rem;">[ENTER WORKPLACE OR INSTITUTION NAME HERE] &middot; [ENTER DATE RANGE HERE]</p>
+                                <p style="font-size: 1.05rem; line-height: 1.65; color: var(--gray);">[Type 2-3 sentences here outlining your day-to-day contributions, core duties, or accomplishments in this position.]</p>
+                            </div>
+                        </div>
+
+                        <!-- 🛠️ 3. TECHNICAL SKILLS CARD (2 Columns Layout) -->
+                        <div class="card" style="padding: 3rem; border-radius: 12px;">
+                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Technical Skills</h3>
+                            
+                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                                <!-- Column 1 -->
+                                <div>
+                                    <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Laboratory Tools</strong>
+                                    <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;">
+                                        <strong>Instrumentation:</strong> [List equipment tools, e.g., UV-Vis, FTIR, HPLC]<br><br>
+                                        <strong>Software:</strong> [List software platforms, e.g., Microsoft Excel, ChemDraw, OriginLab]
+                                    </p>
+                                </div>
+                                
+                                <!-- Column 2 -->
+                                <div>
+                                    <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Methodologies &amp; Standards</strong>
+                                    <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;">
+                                        <strong>Procedures:</strong> [List techniques, e.g., Titrations, Recrystallization, Reflux Extraction]<br><br>
+                                        <strong>Compliance:</strong> [List guidelines, e.g., OSHA Safety Standards, Hazardous Chemical Waste Management]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 🏆 4. AWARDS & HONORS CARD (2 Entries) -->
+                        <div class="card" style="padding: 3rem; border-radius: 12px;">
+                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Awards &amp; Honors</h3>
+                            
+                            <ul style="padding-left: 1.2rem; color: var(--gray); font-size: 1.05rem; line-height: 1.8;">
+                                <li style="margin-bottom: 0.5rem;">[ENTER HONORS TITLE 1 HERE, e.g., Dean's List] &mdash; <span style="color: var(--accent); font-weight: 500;">[ENTER ISSUING BODY / GRADUATION YEAR HERE, e.g., Binghamton University, 2025]</span></li>
+                                <li>[ENTER HONORS TITLE 2 HERE] &mdash; <span style="color: var(--accent); font-weight: 500;">[ENTER ISSUING BODY / YEAR HERE]</span></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </article>
