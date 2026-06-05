@@ -36,7 +36,7 @@
         <!-- ⚪ RIGHT SIDE PANEL (Much Larger Content Description Track) ── -->
         <section class="right-content-track">
             
-            <!-- 1. ABOUT DESCRIPTION -->
+            <!-- SECTION 1: ABOUT -->
             <article id="about" class="scroll-section">
                 <div class="section-content">
                     <h1>Hi, I'm <span>Tony</span></h1>
@@ -45,31 +45,12 @@
                     </p>
                     <div class="card" style="margin-top: 2rem;">
                         <h3>Academic Profile Summary</h3>
-                        <p>I am a final-year Chemistry student at Binghamton University with a strong foundation in laboratory methodologies. I enjoy bridging the gap between theoretical chemical concepts and practical, hands-on experimentation.</p>
+                        <p>[Enter a few sentences about your background, transfer journey, or what fields of chemistry excite you most.]</p>
                     </div>
                 </div>
             </article>
 
-            <!-- 2. EXPERIENCE DESCRIPTION -->
-            <article id="experience" class="scroll-section">
-                <div class="section-content">
-                    <h2 class="section-title">Experience &amp; Education</h2>
-                    <div class="grid">
-                        <div class="card">
-                            <h3>B.S. in Chemistry</h3>
-                            <p class="meta-text">Binghamton University &middot; Expected Graduation: 2026</p>
-                            <p><strong>Transfer Status:</strong> Undergraduate Transfer Student</p>
-                        </div>
-                        <div class="card">
-                            <h3>[LAB WORK OR JOB TITLE]</h3>
-                            <p class="meta-text">[COMPANY OR INSTITUTION NAME] &middot; [DATES]</p>
-                            <p>[Enter 2-3 sentences here outlining your day-to-day work, lab technician responsibilities, or academic assistant achievements.]</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 3. PROJECTS DESCRIPTION -->
+            <!-- SECTION 2: PROJECTS -->
             <article id="projects" class="scroll-section">
                 <div class="section-content">
                     <h2 class="section-title">Laboratory Projects</h2>
@@ -90,33 +71,61 @@
                 </div>
             </article>
 
-            <!-- 4. SKILLS DESCRIPTION -->
-            <article id="skills" class="scroll-section">
+            <!-- SECTION 3: THE MASTER RESUME TRACK (Combines Education, Experience, Skills, Awards) -->
+            <article id="resume" class="scroll-section">
                 <div class="section-content">
-                    <h2 class="section-title">Technical Toolkits</h2>
+                    <h2 class="section-title">Curriculum Vitae</h2>
+                    
+                    <!-- Download Master Action Block -->
+                    <div class="card text-center" style="margin-bottom: 2rem; padding: 2.5rem 2rem;">
+                        <h3>Official Resume Document</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray);">Access my complete, printable chronological history and references.</p>
+                        <a href="resume.pdf" target="_blank" class="btn">Download Official Resume (PDF)</a>
+                    </div>
+
+                    <!-- Nested Resume Sub-Sections Grid -->
                     <div class="grid">
+                        
+                        <!-- 🎓 Education Card -->
                         <div class="card">
-                            <h3>Laboratory Instruments</h3>
-                            <p>[List all hardware and software equipment tools you have practical experience with here, e.g., GC-MS, FTIR spectrophotometers, centrifuges, distillation columns.]</p>
+                            <h3 style="color: var(--primary);">🎓 Education</h3>
+                            <p style="font-weight: 600; color: var(--dark); margin-top: 0.5rem;">B.S. in Chemistry</p>
+                            <p class="meta-text" style="margin-bottom: 0.5rem;">Binghamton University &middot; Class of 2026</p>
+                            <p><strong>Status:</strong> Undergrad Transfer Student</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Key Coursework:</strong> Analytical Chemistry, Organic Chemistry Labs, Physical Chemistry, Instrumental Analysis.</p>
                         </div>
+
+                        <!-- 🔬 Experience Card -->
                         <div class="card">
-                            <h3>Methodologies & Compliance</h3>
-                            <p>[List your practical skillsets and safety standards here, e.g., Titrations, solvent extractions, chemical crystallization, chemical hazardous waste mitigation, OSHA protocols.]</p>
+                            <h3 style="color: var(--primary);">🔬 Experience</h3>
+                            <p style="font-weight: 600; color: var(--dark); margin-top: 0.5rem;">[Your Role Name, e.g., Lab Assistant / Tutor]</p>
+                            <p class="meta-text" style="margin-bottom: 0.5rem;">[Institution or Department Name] &middot; [Dates]</p>
+                            <p style="font-size: 0.9rem;">[Enter 1-2 quick sentences summarizing your duties, hands-on lab techniques, or assistant responsibilities.]</p>
                         </div>
+
+                        <!-- 🛠️ Skills Card -->
+                        <div class="card">
+                            <h3 style="color: var(--primary);">🛠️ Technical Skills</h3>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.6;">
+                                <strong>Instrumentation:</strong> UV-Vis, FTIR, HPLC, Gas Chromatography, Distillation. <br>
+                                <strong>Methodologies:</strong> Volumetric Titrations, Solvent Extraction, Chemical Synthesis, Lab Safety Protocols, OSHA Compliance.
+                            </p>
+                        </div>
+
+                        <!-- 🏆 Awards Card -->
+                        <div class="card">
+                            <h3 style="color: var(--primary);">🏆 Awards &amp; Honors</h3>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.2rem; color: var(--gray); font-size: 0.9rem; line-height: 1.6;">
+                                <li>[Award Title Name, e.g., Dean's List] &middot; <span style="color: var(--primary);">[Year]</span></li>
+                                <li>[Scholarship or Academic Recognition] &middot; <span style="color: var(--primary);">[Year]</span></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </article>
 
-            <!-- 5. RESUME LINK PANEL -->
-            <article id="resume" class="scroll-section">
-                <div class="section-content text-center">
-                    <h2 class="section-title">Curriculum Vitae</h2>
-                    <p style="margin-bottom: 2.5rem; color: var(--gray);">Access my complete, formal chronological history, references, and publications in a single printable dashboard format.</p>
-                    <a href="[LINK_TO_YOUR_RESUME_PDF.pdf]" target="_blank" class="btn">Download Official Resume (PDF)</a>
-                </div>
-            </article>
-
-            <!-- 6. CONTACT DESCRIPTION -->
+            <!-- SECTION 4: CONTACT -->
             <article id="contact" class="scroll-section">
                 <div class="section-content">
                     <h2 class="section-title">Get In Touch</h2>
@@ -124,7 +133,7 @@
                         <h3>Contact Information</h3>
                         <p style="margin-bottom: 0.8rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
                         <p style="margin-bottom: 0.8rem;"><strong>Location:</strong> Binghamton, NY</p>
-                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, analytical positions, research collaborations, or industry internships.</p>
+                        <p style="margin-top: 1.5rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industrial internships.</p>
                     </div>
                 </div>
             </article>
