@@ -19,7 +19,7 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ⚡ THE SECRET LINK: Instructs the browser engine to slide smoothly when clicked */
+/* Forces the browser to scroll smoothly when clicking the menu links */
 html {
     scroll-behavior: smooth;
 }
@@ -30,7 +30,7 @@ body {
     font-family: var(--font-sans);
     color: var(--dark);
     background-color: var(--white);
-    overflow: hidden; /* Stops double scrollbars on the main screen windows */
+    overflow: hidden; /* Stops double scrollbars on the main screen */
 }
 
 /* ── Proportional Layout Engine ── */
@@ -40,7 +40,7 @@ body {
     height: 100vh;
 }
 
-/* 🟢 LEFT SIDEBAR (Takes up exactly 25% of the screen width, colored background) */
+/* LEFT SIDEBAR (25% Screen Width) */
 .left-sidebar {
     flex: 0 0 25%; 
     background-color: var(--primary);
@@ -68,7 +68,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Round Profile Image Avatar sizing */
+/* Round Profile Image */
 .hero-photo {
     width: 150px;
     height: 150px;
@@ -79,7 +79,7 @@ body {
     margin-bottom: 3.5rem;
 }
 
-/* Stacked Side Navbar Menu Links styling */
+/* Stacked Side Navbar Menu Links */
 .nav-links-vertical {
     list-style: none;
     display: flex;
@@ -99,21 +99,21 @@ body {
 
 .nav-links-vertical a:hover {
     color: var(--white);
-    transform: translateX(6px); /* Moves name rightward slightly on pointer hover */
+    transform: translateX(6px); /* Nudges right on hover */
 }
 
-/* ⚪ RIGHT PANEL TRACK (Takes up the larger 75% of the screen width, scrolls cleanly) */
+/* RIGHT PANEL TRACK (75% Screen Width) */
 .right-content-track {
     flex: 0 0 75%; 
     height: 100%;
-    overflow-y: auto; /* Activates internal scrolling on this track panel alone */
+    overflow-y: auto; /* Activates internal scrolling on this track alone */
     padding: 0;
 }
 
-/* Large Page Content Cards Blocks */
+/* Large Page Content Blocks */
 .scroll-section {
     width: 100%;
-    min-height: 100vh; /* Every segment fills up a complete single view slide height */
+    min-height: 100vh; /* Every section fills a single view height */
     display: flex;
     align-items: center;
     padding: 6rem 5.5rem;
@@ -121,7 +121,7 @@ body {
 }
 
 .scroll-section:nth-child(even) {
-    background-color: var(--light); /* Gives alternate rows a subtle light surface */
+    background-color: var(--light); /* Alternating light background gray */
 }
 
 .section-content {
@@ -143,7 +143,7 @@ body {
 .section-content h1 span { color: var(--primary); font-style: italic; }
 .lead-text { font-size: 1.25rem; color: var(--gray); line-height: 1.75; margin-bottom: 2rem; }
 
-/* Grid Block elements mapping layout definitions */
+/* Grid Block element spacing */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -172,14 +172,14 @@ body {
 .tag { display: inline-block; background-color: var(--primary-light); color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.5px; }
 .tech-list { margin-top: 1.2rem; font-size: 0.92rem; color: var(--dark); }
 
-/* Download Call to Action Button element layout styling */
+/* Download Call to Action Button */
 .btn { display: inline-block; padding: 0.8rem 2.2rem; background-color: var(--primary); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 500; transition: var(--transition); border: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(15, 81, 50, 0.15); }
 .btn:hover { background-color: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(25, 135, 84, 0.25); }
 .text-center { text-align: center; }
 
 .track-footer { padding: 3rem 5.5rem; background-color: var(--dark); color: rgba(255,255,255,0.4); font-size: 0.85rem; text-align: center; }
 
-/* Responsive break points for portable viewports and mobile layout definitions */
+/* Responsive break points for mobile devices */
 @media (max-width: 950px) {
     body { overflow: auto; }
     .portfolio-container { flex-direction: column; height: auto; }
