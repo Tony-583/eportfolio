@@ -3,136 +3,147 @@
    Students: change the 4 CSS variables below to retheme everything
    ============================================================ */
 
-/* ── Split Slide Stylesheet ── */
-@import url('https://googleapis.com');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tony Jin — E-Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-:root {
-    --primary: #0f5132;        /* [COLOR MATCH: Elegant Deep Emerald Green] */
-    --primary-light: #d1e7dd;  /* [COLOR MATCH: Soft Green Tint Accent] */
-    --accent: #198754;         /* [COLOR MATCH: Bright Interactive Lab Green] */
-    --dark: #212529;           /* [COLOR MATCH: Dark Background Typography Gray] */
-    --light: #f8f9fa;          /* [COLOR MATCH: Light Clean Off-White Surface] */
-    --white: #ffffff;
-    --gray: #6c757d;
-    --font-sans: 'Inter', sans-serif;
-    --font-serif: 'Playfair Display', serif;
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+    <!-- ── Main Screen Slide Container ── -->
+    <main class="slide-container">
+        
+        <!-- LEFT SIDE: Fixed Dashboard Panel (Color Background) -->
+        <aside class="left-dashboard">
+            <div class="dashboard-inner">
+                <span class="nav-brand">Tony Jin</span>
+                
+                <!-- 📸 PHOTO: Ensure this matches your file name exactly -->
+                <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
+                
+                <!-- ── Navigation Menu (Tied to the slideshow cards) ── -->
+                <nav class="side-nav">
+                    <ul class="nav-links-vertical">
+                        <li><a href="#about" class="active">About Me</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+        <!-- RIGHT SIDE: The Slideshow Track -->
+        <section class="right-slideshow-track">
+            
+            <!-- CARD 1: ABOUT ME -->
+            <article id="about" class="slide-card hero-slide">
+                <div class="card-content">
+                    <h1>Hi, I'm <span>Tony</span></h1>
+                    <p class="lead-text">
+                        Undergrad transfer student majoring in Chemistry at Binghamton University [2026]. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
+                    </p>
+                    <p>[ENTER A SHORT SUMMARY ABOUT YOUR TRANSFER JOURNEY OR SCIENTIFIC MISSION HERE]</p>
+                </div>
+            </article>
 
-body {
-    font-family: var(--font-sans);
-    color: var(--dark);
-    background-color: var(--white);
-    overflow: hidden; /* Locks browser window scroll behavior */
-}
+            <!-- CARD 2: EDUCATION -->
+            <article id="education" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Education</h2>
+                    <div class="info-block">
+                        <h3>B.S. in Chemistry</h3>
+                        <p class="meta-text">Binghamton University &middot; Expected Graduation: 2026</p>
+                        <p><strong>Transfer Status:</strong> Undergrad Transfer Student</p>
+                        <p style="margin-top: 1rem;"><strong>Relevant Coursework:</strong> [LIST KEY CLASSES, e.g., Analytical Chemistry, Instrumental Analysis, Organic Chemistry Lab]</p>
+                    </div>
+                </div>
+            </article>
 
-/* ── Split Layout Engine ── */
-.slide-container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
+            <!-- CARD 3: EXPERIENCE -->
+            <article id="experience" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Experience</h2>
+                    <div class="info-block">
+                        <h3>[JOB OR LAB TITLE, e.g., Undergraduate Laboratory Assistant]</h3>
+                        <p class="meta-text">[COMPANY OR LAB NAME] &middot; [DATE RANGE]</p>
+                        <p>[ENTER 2-3 SENTENCES HIGHLIGHTING YOUR MAIN DUTIES, LAB RESPONSIBILITIES, OR QUALITY ASSURANCE WORK HERE]</p>
+                    </div>
+                </div>
+            </article>
 
-/* Left Panel - Fixed Profile Image Card */
-.profile-panel {
-    flex: 0 0 40%; 
-    background: linear-gradient(135deg, var(--white) 30%, var(--primary-light) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid rgba(0,0,0,0.05);
-    height: 100%;
-}
+            <!-- CARD 4: PROJECTS -->
+            <article id="projects" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Laboratory Projects</h2>
+                    <div class="info-block">
+                        <h3>[CHEMISTRY PROJECT TITLE, e.g., Quantitative Spectroscopic Assay]</h3>
+                        <p class="meta-text">Academic Lab Focus</p>
+                        <p>[ENTER A BRIEF OVERVIEW DESCRIBING YOUR EXPERIMENT GOAL, METHODS USED, AND KEY ACADEMIC FINDINGS]</p>
+                    </div>
+                </div>
+            </article>
 
-.panel-inner {
-    text-align: center;
-    padding: 2rem;
-}
+            <!-- CARD 5: SKILLS -->
+            <article id="skills" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="sub-card">
+                            <h3>Laboratory Instrumentation</h3>
+                            <p>[LIST EQUIPMENT, e.g., UV-Vis Spectroscopy, FTIR, HPLC, Gas Chromatography]</p>
+                        </div>
+                        <div class="sub-card">
+                            <h3>Methodologies & Safety</h3>
+                            <p>[LIST METHODOLOGIES, e.g., Titration, Organic Synthesis, Distillation, Waste Management, OSHA Compliance]</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-.nav-brand {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary);
-    display: block;
-    margin-bottom: 2rem;
-}
+            <!-- CARD 6: AWARDS -->
+            <article id="awards" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Awards & Honors</h2>
+                    <div class="info-block">
+                        <h3>[AWARD NAME, e.g., Dean's List or Scholarship Title]</h3>
+                        <p class="meta-text">[ISSUING BODY OR UNIVERSITY] &middot; [YEAR]</p>
+                        <p>[ENTER A BRIEF ONE-SENTENCE DESCRIPTION OF WHAT THE AWARD RECOGNIZES OR SELECTIVE CRITERIA HERE]</p>
+                    </div>
+                </div>
+            </article>
 
-.hero-photo {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border: 6px solid var(--white);
-    animation: morph 8s ease-in-out infinite alternate;
-    margin-bottom: 2.5rem;
-}
+            <!-- CARD 7: RESUME -->
+            <article id="resume" class="slide-card">
+                <div class="card-content text-center">
+                    <h2 class="slide-title">Curriculum Vitae</h2>
+                    <p style="margin-bottom: 2rem;">Access my full professional timeline, technical toolkits, and academic history in a printable layout.</p>
+                    <a href="[LINK_TO_YOUR_RESUME_PDF.pdf]" target="_blank" class="btn">Download Official Resume (PDF)</a>
+                </div>
+            </article>
 
-@keyframes morph {
-    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-    100% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
-}
+            <!-- CARD 8: CONTACT -->
+            <article id="contact" class="slide-card">
+                <div class="card-content">
+                    <h2 class="slide-title">Get In Touch</h2>
+                    <div class="info-block">
+                        <h3>Contact Information</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:[YOUR_EMAIL@BINGHAMTON.EDU]" style="color: var(--primary); text-decoration: none;">[YOUR_EMAIL@BINGHAMTON.EDU]</a></p>
+                        <p style="margin-bottom: 0.5rem;"><strong>Location:</strong> Binghamton, NY</p>
+                        <p style="margin-top: 1rem;">Feel free to reach out regarding laboratory opportunities, research collaborations, or industry internships.</p>
+                    </div>
+                </div>
+            </article>
 
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    padding-top: 1.5rem;
-}
+        </section>
+    </main>
 
-.stat { display: flex; flex-direction: column; }
-.stat strong { font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); }
-.stat span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); }
-
-/* Right Panel - Scrollable content track inside the slide */
-.content-panel {
-    flex: 0 0 60%; 
-    height: 100%;
-    overflow-y: auto; 
-    padding: 3rem 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-.content-nav {
-    align-self: flex-end;
-}
-
-.nav-links { display: flex; list-style: none; gap: 2rem; }
-.nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
-.nav-links a:hover, .nav-links a.active { color: var(--primary); }
-
-.content-block h1 { font-family: var(--font-serif); font-size: 3.5rem; color: var(--dark); margin-bottom: 1rem; }
-.content-block h1 span { color: var(--primary); font-style: italic; }
-.lead-text { font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem; max-width: 650px; line-height: 1.7; }
-
-.hero-btns { display: flex; gap: 1rem; }
-.btn { display: inline-block; padding: 0.7rem 1.5rem; background-color: var(--primary); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 500; transition: var(--transition); border: 2px solid var(--primary); }
-.btn:hover { background-color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
-.btn-outline { background-color: transparent; color: var(--primary); }
-.btn-outline:hover { background-color: var(--primary-light); }
-
-.section-title-left { font-family: var(--font-serif); font-size: 2rem; color: var(--dark); margin-bottom: 1.5rem; }
-.grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; } 
-
-.card { background-color: var(--light); padding: 1.8rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.02); transition: var(--transition); }
-.card:hover { transform: translateX(5px); border-color: rgba(15, 81, 50, 0.2); background-color: var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
-.card h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem; }
-.card p { color: var(--gray); font-size: 0.95rem; }
-
-.slide-footer { margin-top: auto; padding-top: 3rem; border-top: 1px solid rgba(0,0,0,0.05); font-size: 0.85rem; color: var(--gray); display: flex; justify-content: space-between; }
-.slide-footer a { color: var(--dark); text-decoration: none; font-weight: 500; }
-
-/* Responsive break points for tablet screens and mobile viewports */
-@media (max-width: 850px) {
-    body { overflow: auto; }
-    .slide-container { flex-direction: column; height: auto; width: 100%; }
-    .profile-panel, .content-panel { flex: 0 0 100%; width: 100%; height: auto; }
-    .content-panel { padding: 2rem; gap: 3rem; }
-    .content-nav { align-self: center; margin-bottom: 1rem; }
-}
+</body>
+</html>
