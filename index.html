@@ -286,7 +286,7 @@
 
   <!-- 🟢 NEW Categories Subtitle Line -->
   <p style="color: var(--gray); font-size: 1.1rem; font-weight: 400; margin: 0; letter-spacing: 0.3px;">
-    Education &nbsp;•&nbsp; Work Experience &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Awards/Honors
+    Education &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Work Experience &nbsp;•&nbsp; Awards/Honors
   </p>
 
 </div> 
@@ -334,62 +334,53 @@
 </div>
                         </div>
 
-<!-- 🔬 2. WORK EXPERIENCE CARD --> 
-<div class="card" style="padding: 3rem; border-radius: 12px;"> 
-  
-  <!-- 1. Changed Title Text -->
-  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Work Experience</h3> 
+<!-- 🛠️ 2. TECHNICAL SKILLS CARD (Moved Up) --> 
+<div id="skills" class="card" style="padding: 3rem; border-radius: 12px; margin-bottom: 2.5rem;"> 
+  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Technical Skills</h3> 
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"> 
+    <!-- Column 1 --> 
+    <div> 
+      <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Laboratory Tools</strong> 
+      <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;"> 
+        <strong>Instrumentation:</strong> [List equipment tools, e.g., UV-Vis, FTIR, HPLC]<br><br> 
+        <strong>Software:</strong> [List software platforms, e.g., Microsoft Excel, ChemDraw, OriginLab] 
+      </p> 
+    </div> 
+    <!-- Column 2 --> 
+    <div> 
+      <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Methodologies &amp; Standards</strong> 
+      <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;"> 
+        <strong>Procedures:</strong> [List techniques, e.g., Titrations, Recrystallization, Reflux Extraction]<br><br> 
+        <strong>Compliance:</strong> [List guidelines, e.g., OSHA Safety Standards, Hazardous Chemical Waste Management] 
+      </p> 
+    </div> 
+  </div> 
+</div>
 
+<!-- 🔬 3. WORK EXPERIENCE CARD (Moved Down) --> 
+<div id="experience" class="card" style="padding: 3rem; border-radius: 12px;"> 
+  <!-- 1. Changed Title Text --> 
+  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Work Experience</h3> 
   <!-- Entry 1 --> 
   <div style="margin-bottom: 2rem;"> 
     <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">SDIP REU Researcher</p> 
-    
-    <!-- 2. Combined into a single paragraph with <br> for tight spacing and uniform green color -->
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">
-      Clarkson University &middot; May 2026 - August 2026 <br>
-      An Undergrad research experience that focuses on developing a material sensor that is cost-effective, sufficient, and biodegradable
-        to remove phosphate from aquatic systems. Analyzed with instrumentation and various techniques to determine the factors.
+    <!-- 2. Combined into a single paragraph with <br> for tight spacing and uniform green color --> 
+    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;"> 
+      Clarkson University &middot; May 2026 - August 2026 <br> 
+      An Undergrad research experience that focuses on developing a material sensor that is cost-effective, sufficient, and biodegradable to remove phosphate from aquatic systems. Analyzed with instrumentation and various techniques to determine the factors. 
     </p> 
   </div> 
-
   <!-- Entry 2 --> 
   <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;"> 
     <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">[ENTER JOB OR PREVIOUS ROLE 2 HERE]</p> 
-    
-    <!-- 3. Applied identical tight spacing & color matching here -->
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">
-      [ENTER WORKPLACE OR INSTITUTION NAME HERE] &middot; [ENTER DATE RANGE HERE]<br>
-      • [Type first sentence outlining day-to-day contributions]<br>
-      • [Type second sentence outlining accomplishments in this position]
+    <!-- 3. Applied identical tight spacing & color matching here --> 
+    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;"> 
+      [ENTER WORKPLACE OR INSTITUTION NAME HERE] &middot; [ENTER DATE RANGE HERE]<br> 
+      • [Type first sentence outlining day-to-day contributions]<br> 
+      • [Type second sentence outlining accomplishments in this position] 
     </p> 
   </div> 
-
 </div>
-
-                        <!-- 🛠️ 3. TECHNICAL SKILLS CARD (2 Columns Layout) -->
-                        <div class="card" style="padding: 3rem; border-radius: 12px;">
-                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Technical Skills</h3>
-                            
-                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                                <!-- Column 1 -->
-                                <div>
-                                    <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Laboratory Tools</strong>
-                                    <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;">
-                                        <strong>Instrumentation:</strong> [List equipment tools, e.g., UV-Vis, FTIR, HPLC]<br><br>
-                                        <strong>Software:</strong> [List software platforms, e.g., Microsoft Excel, ChemDraw, OriginLab]
-                                    </p>
-                                </div>
-                                
-                                <!-- Column 2 -->
-                                <div>
-                                    <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Methodologies &amp; Standards</strong>
-                                    <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;">
-                                        <strong>Procedures:</strong> [List techniques, e.g., Titrations, Recrystallization, Reflux Extraction]<br><br>
-                                        <strong>Compliance:</strong> [List guidelines, e.g., OSHA Safety Standards, Hazardous Chemical Waste Management]
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
                         <!-- 🏆 4. AWARDS & HONORS CARD (2 Entries) -->
                         <div class="card" style="padding: 3rem; border-radius: 12px;">
