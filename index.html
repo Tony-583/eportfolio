@@ -274,20 +274,28 @@
             <article id="resume" class="scroll-section">
                 <div class="section-content">
                     
-<!-- 📥 INLINE HEADER BLOCK: Title and Button Side-by-Side --> 
-<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary-light); padding-bottom: 0.6rem; margin-bottom: 2.5rem;"> 
-  <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: var(--primary);">Resume</h2> 
+<!-- 📥 INLINE HEADER BLOCK: Title, Subtitle, and Button Layout --> 
+<div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;"> 
   
-  <!-- 🟢 Capitalized 'T' to match your file exactly --> 
-  <a href="images/Tony's Resume.pdf" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.95rem; border-radius: 20px;">Download PDF</a> 
+  <!-- Main Title and Download Button Row -->
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+    <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: var(--primary); margin: 0;">Resume</h2> 
+    <!-- 🟢 Capitalized 'T' to match your file exactly --> 
+    <a href="images/Tony's Resume.pdf" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.95rem; border-radius: 20px;">Download PDF</a> 
+  </div>
+
+  <!-- 🟢 NEW Categories Subtitle Line -->
+  <p style="color: var(--gray); font-size: 1.1rem; font-weight: 400; margin: 0; letter-spacing: 0.3px;">
+    Education &nbsp;•&nbsp; Experience &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Awards/Honors
+  </p>
+
 </div> 
-                    
-                    <!-- Master Vertical Stack for Resume Categories -->
-                    <div style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;">
-                        
-                        <!-- 🎓 1. EDUCATION CARD (2 Entries) -->
-                        <div class="card" style="padding: 3rem; border-radius: 12px;">
-                            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Education</h3>
+
+<!-- Master Vertical Stack for Resume Categories --> 
+<div style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;"> 
+  <!-- 🎓 1. EDUCATION CARD (2 Entries) --> 
+  <div class="card" style="padding: 3rem; border-radius: 12px;"> 
+    <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Education</h3>
                             
 <!-- Entry 1 -->
 <div style="margin-bottom: 1.5rem;">
