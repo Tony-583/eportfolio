@@ -59,7 +59,8 @@
             max-width: 100% !important;        /* 🛠️ CHANGED: Expands tracking from max-w all the way to screen edges */
             margin: 0 auto; 
             padding: 0 4rem;                   /* 🛠️ Gives breathing room from the literal monitor edge */
-            height: 5.5rem;                    /* 🛠️ BUMPED: Expanded vertical header height from 4.5rem to 5.5rem */
+            /* 🛠️ SLIMMED: Lowered height from 5.5rem to a tight 3.8rem */
+            height: 3.8rem;  
         } 
         
 /* 🛠️ NEW: Initial Circle Logo Component Layout */
@@ -67,8 +68,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;                       
-    height: 42px;
+    width: 34px;                       
+    height: 34px;
     background-color: var(--accent-dark); 
     border-radius: 50%;                
     text-decoration: none !important;
@@ -79,7 +80,7 @@
 
 .nav-logo-circle span {
     color: #ffffff !important;         
-    font-size: 1.05rem;
+    font-size: 0.85rem;
     font-weight: 800;                  
     letter-spacing: -0.5px;
 }
@@ -101,7 +102,7 @@
         
         .nav-links a { 
             color: var(--muted); 
-            font-size: 1.05rem;                /* 🛠️ BUMPED: Sized up option text sizes for quicker scanning */
+            font-size: 0.95rem;                /* 🛠️ BUMPED: Sized up option text sizes for quicker scanning */
             font-weight: 700; 
             transition: color .2s; 
         } 
