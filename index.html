@@ -58,14 +58,13 @@
             max-width: 100% !important;        
             margin: 0 auto; 
             padding: 0 4rem;                   
-            height: 4.2rem;                    /* 📐 Adjusted slightly to hold the bigger logo cleanly */
+            height: 4.2rem;                    
         } 
         
         .nav-logo-circle {
             display: flex;
             align-items: center;
             justify-content: center;
-            /* 🛠️ BUMPED: Logo is now a prominent 50px circle that breaks past the bar edges */
             width: 50px;                       
             height: 50px;
             background-color: var(--accent-dark); 
@@ -78,31 +77,31 @@
 
         .nav-logo-circle span {
             color: #ffffff !important;         
-            font-size: 1.2rem;                 /* 🛠️ Bigger, bolder initials */
+            font-size: 1.2rem;                 
             font-weight: 800;                  
             letter-spacing: -0.5px;
         }
 
         .nav-logo-circle:hover {
             background-color: var(--accent);   
-            transform: scale(1.08) translateY(-1px); /* Slight expand pop on hover */
+            transform: scale(1.08) translateY(-1px); 
             box-shadow: 0 6px 16px rgba(21, 128, 61, 0.3);
         }
         
         .nav-links { 
             display: flex; 
-            gap: 3rem;                         /* 📐 Wider spacing for bigger words */
+            gap: 3rem;                         
             list-style: none; 
             justify-self: center;              
         } 
         
         .nav-links li {
-            position: relative;                /* Required to position the sliding underline line */
+            position: relative;                
         }
 
         .nav-links a { 
             color: var(--muted); 
-            font-size: 1.05rem;                /* 🛠️ BUMPED: Category font is larger and easier to scan */
+            font-size: 1.05rem;                
             font-weight: 700; 
             padding: 0.5rem 0;
             display: inline-block;
@@ -110,30 +109,34 @@
             text-decoration: none !important;
         } 
 
-        /* 🛠️ ANIMATION: Creates the hidden line underneath the link text */
+        /* ── Baseline Hidden Underline State ── */
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 3px;                       /* Thickness of the animated underline line */
-            background-color: var(--accent);   /* Uses your signature leaf green */
+            height: 3px;                       
+            background-color: var(--accent);   
             border-radius: 2px;
-            transform: scaleX(0);              /* Starts completely hidden at 0 width */
-            transform-origin: right;           /* Retreats to the right side when mouse leaves */
-            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Ultra-smooth glide physics */
+            transform: scaleX(0);              /* Line is completely hidden by default */
+            transform-origin: right;           
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
 
-        /* 🛠️ ANIMATION TRIGGER: Activates when mouse hovers over link or section is active */
-        .nav-links a:hover, .nav-links a.active { 
-            color: var(--accent-dark); 
+        /* 🛠️ THE FIX: Changes text color when mouse hovers OR when section is active constant */
+        .nav-links a:hover, 
+        .nav-links a.active { 
+            color: var(--accent-dark) !important; 
         }
 
-        .nav-links a:hover::after, .nav-links a.active::after {
-            transform: scaleX(1);              /* Expands beautifully to 100% full width */
-            transform-origin: left;            /* Grows outward starting from the left side */
+        /* 🛠️ THE FIX: Expands the underline line on mouse hover OR keeps it permanent when class active is live */
+        .nav-links a:hover::after, 
+        .nav-links a.active::after {
+            transform: scaleX(1) !important;   /* Expands line out to 100% full width visibility */
+            transform-origin: left !important; 
         }
+
 
 
         /* 5. INTERFACE BUTTON CONFIGURATIONS */ 
