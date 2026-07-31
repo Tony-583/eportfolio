@@ -370,8 +370,8 @@
                 });
             }, observerOptions);
 
-            // Tracks both your unique 'hero' class and your 'section' card classes together
-            document.querySelectorAll('.hero, .section').forEach(section => observer.observe(section));
+// 🛠️ UPDATED: Monitors ALL section tags regardless of what custom class name they use!
+document.querySelectorAll('section').forEach(section => observer.observe(section));
         });
     </script>
 
