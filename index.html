@@ -1,107 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — E-Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name — E-Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav>
-  <input type="checkbox" id="nav-toggle" />
-  <div class="nav-inner">
-    <span class="nav-brand">YourName.dev</span>
-    <label class="nav-toggle-label" for="nav-toggle">
-      <span></span>
-    </label>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <!-- ── Navigation ── -->
+    <nav>
+        <input type="checkbox" id="nav-toggle" />
+        <div class="nav-inner">
+            <span class="nav-brand">YourName.dev</span>
+            <label class="nav-toggle-label" for="nav-toggle">
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- ── Hero ── -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Your Name</span></h1>
-      <p>
-        Undergrad student in Computer Science at [Your University].
-        I build things for the web, explore machine learning, and care
-        about making technology accessible.
-      </p>
-      <div class="hero-btns">
-        <a href="projects.html" class="btn">View My Projects</a>
-        <a href="resume.html"   class="btn btn-outline">Download Resume</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><strong>3+</strong><span>Projects</span></div>
-        <div class="stat"><strong>2</strong><span>Internships</span></div>
-        <div class="stat"><strong>2026</strong><span>Graduating</span></div>
-      </div>
-    </div>
-    <!-- Add your photo: upload a file called profile.jpg into the images/ folder -->
-    <img
-      src="images/profile.jpg"
-      alt="Profile photo"
-      class="hero-photo"
-    />
-  </div>
-</section>
+    <!-- ── Hero ── -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Your Name</span></h1>
+                <p>
+                    Undergrad student in Computer Science at [Your University]. 
+                    I build things for the web, explore machine learning, and care about making technology accessible.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">View My Projects</a>
+                    <a href="#resume" class="btn btn-outline">Download Resume</a>
+                </div>
+                <div class="stats">
+                    <div class="stat"><strong>3+</strong><span>Projects</span></div>
+                    <div class="stat"><strong>2</strong><span>Internships</span></div>
+                    <div class="stat"><strong>2026</strong><span>Graduating</span></div>
+                </div>
+            </div>
+            <img src="images/profile.jpg" alt="Profile photo" class="hero-photo" />
+        </div>
+    </section>
 
-<!-- ── About ── -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-sub">A little more about who I am and what drives me.</p>
-    <div class="grid">
+    <!-- ── Projects ── -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-sub">A showcase of my recent technical work and engineering builds.</p>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Project Title 1</h3>
+                    <p>Description of your engineering application, framework systems, or data builds goes here.</p>
+                </div>
 
-      <div class="card">
-        <h3>Background</h3>
-        <p>
-          I'm a final-year Computer Science student with a passion for
-          building useful software. I've worked on projects ranging from
-          full-stack web apps to data pipelines, and I'm always looking
-          for the next problem to solve.
-        </p>
-      </div>
+                <div class="card">
+                    <h3>Project Title 2</h3>
+                    <p>Description of your engineering application, framework systems, or data builds goes here.</p>
+                </div>
 
-      <div class="card">
-        <h3>Interests</h3>
-        <p>
-          Outside of coding I enjoy open-source contribution, competitive
-          programming, and mentoring junior students. I believe in learning
-          in public and writing about what I build.
-        </p>
-      </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="card">
-        <h3>Currently Learning</h3>
-        <p>
-          Diving deeper into cloud-native architecture (AWS / GCP),
-          distributed systems, and responsible AI — especially fairness
-          and explainability in ML models.
-        </p>
-      </div>
+    <!-- ── Skills ── -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-sub">Proficiencies across development frameworks, software tools, and languages.</p>
+            <div class="grid">
 
-    </div>
-  </div>
-</section>
+                <div class="card">
+                    <h3>Core Proficiencies</h3>
+                    <p>List your developer software systems, tools, languages, or protocols across this card block.</p>
+                </div>
 
-<!-- ── Footer ── -->
-<footer>
-  <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
-  <p style="margin-top:.4rem;">
-    <a href="https://github.com/YourUsername">GitHub</a> &nbsp;·&nbsp;
-    <a href="https://linkedin.com/in/yourhandle">LinkedIn</a>
-  </p>
-</footer>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Resume ── -->
+    <section class="section section-alt" id="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <p class="section-sub">A chronological breakdown of my technical background and history.</p>
+            <div class="grid">
+
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Academic &amp; Work Milestones</h3>
+                    <p>Your academic accomplishments, historical entries, and professional timelines go here.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer & Contact ── -->
+    <footer id="contact">
+        <div class="container">
+            <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
+            <p style="margin-top:.4rem;">
+                <a href="https://github.com" target="_blank">GitHub</a> &nbsp;·&nbsp;
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
