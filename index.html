@@ -324,3 +324,57 @@
             <div class="grid">
                 <div class="card">
                     <h3>Contact Channels</h3>
+                                        <p style="margin-top: 0.8rem; font-size: 1.05rem;"><strong>Email Address:</strong> your.email@example.com</p>
+                    <p style="font-size: 1.05rem;"><strong>GitHub Profile:</strong> ://github.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Site Footer ── -->
+    <footer>
+        <div class="container">
+            <p>Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p>
+            <p style="margin-top: 0.4rem;">
+                <a href="https://://github.com" target="_blank">GitHub</a> &nbsp;&middot;&nbsp; 
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ── 🛠️ PERFECT RESYNCED SCROLL TRACKER SCRIPT ── -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -40% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        const targetId = currentId === 'home' ? '#top' : `#${currentId}`;
+
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === targetId) {
+                                link.classList.add('active'); // Forces the underline to be permanent
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Tracks both your unique 'hero' class and your 'section' card classes together
+            document.querySelectorAll('.hero, .section').forEach(section => observer.observe(section));
+        });
+    </script>
+
+</body>
+</html>
+
