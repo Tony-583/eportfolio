@@ -228,4 +228,13 @@ footer {
   text-align: center; padding: 2rem 1rem;
   border-top: 1px solid var(--border);
   color: var(--muted); font-size: .85rem;
+
+ /* ── Section Divider Line ── */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: var(--border); /* Matches your soft green accent border tint */
+    max-width: var(--max-w);
+    margin: 0 auto;
+}  
 }
