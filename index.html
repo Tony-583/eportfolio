@@ -62,13 +62,35 @@
             height: 5.5rem;                    /* 🛠️ BUMPED: Expanded vertical header height from 4.5rem to 5.5rem */
         } 
         
-        .nav-brand { 
-            font-weight: 800; 
-            font-size: 1.5rem;                 /* 🛠️ BUMPED: Name text is noticeably larger and more prominent */
-            color: var(--accent-dark); 
-            letter-spacing: -0.5px; 
-            justify-self: start;               /* 🛠️ PLACEMENT: Pushes TJ firmly all the way to the far left margin */
-        } 
+/* 🛠️ NEW: Initial Circle Logo Component Layout */
+.nav-logo-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;                       
+    height: 42px;
+    background-color: var(--accent-dark); 
+    border-radius: 50%;                
+    text-decoration: none !important;
+    justify-self: start;               
+    box-shadow: 0 4px 10px rgba(6, 78, 59, 0.15);
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-logo-circle span {
+    color: #ffffff !important;         
+    font-size: 1.05rem;
+    font-weight: 800;                  
+    letter-spacing: -0.5px;
+}
+
+/* Micro-Interaction Hover Response */
+.nav-logo-circle:hover {
+    background-color: var(--accent);   
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: 0 6px 14px rgba(21, 128, 61, 0.25);
+}
+
         
         .nav-links { 
             display: flex; 
@@ -175,7 +197,12 @@
     <!-- ── Navigation ── -->
     <nav>
         <div class="nav-inner">
-            <span class="nav-brand">Tony Jin</span>
+            
+            <!-- 🛠️ NEW: Interactive Initial Circle Logo Link (Far Left) -->
+            <a href="#home" class="nav-logo-circle" aria-label="Scroll to Home">
+                <span>TJ</span>
+            </a>
+            
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
