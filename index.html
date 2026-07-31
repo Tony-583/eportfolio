@@ -5,467 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tony Jin — ePortfolio</title>
     
-    <!-- ── 🛠️ CACHE-PROOF SPLIT LAYOUT ENGINE ── -->
     <style>
+        /* ── 🛠️ PREMIUM SINGLE-COLUMN WIDE ENGINE ── */
         @import url('https://googleapis.com');
 
-        :root {
-            --primary: #0f5132;        /* Premium Lab Emerald Green */
-            --primary-light: #d1e7dd;  /* Soft Green Background Accent Tint */
-            --accent: #198754;         /* Interaction Link Green */
-            --dark: #212529;           /* Charcoal Text Element Color */
-            --light: #f8f9fa;          /* Crisp Alternating Panel Strip */
-            --white: #ffffff;
-            --gray: #6c757d;
-            --font-sans: 'Inter', sans-serif;
-            --font-serif: 'Playfair Display', serif;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        :root { 
+            --primary: #0f5132;        /* Premium Lab Emerald Green */ 
+            --primary-light: #d1e7dd;  /* Soft Green Background Accent Tint */ 
+            --accent: #198754;         /* Interaction Link Green */ 
+            --dark: #212529;           /* Charcoal Text Element Color */ 
+            --light: #f8f9fa;          /* Crisp Alternating Panel Strip */ 
+            --white: #ffffff; 
+            --gray: #6c757d; 
+            --font-sans: 'Inter', sans-serif; 
+            --font-serif: 'Playfair Display', serif; 
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+        } 
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+
+        body { 
+            font-family: var(--font-sans); 
+            color: var(--dark); 
+            background-color: var(--white); 
+            line-height: 1.6;
+        } 
+
+        /* Frame container centering content horizontally */
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: var(--font-sans);
-            color: var(--dark);
+        /* ── NAVIGATION BAR (Fixed Horizontal Top Layout) ── */
+        nav {
             background-color: var(--white);
-            overflow: hidden; /* Locks outer browser window scrollbars */
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .portfolio-container {
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        /* 🟢 LEFT HAND SIDEBAR PANEL (25% Width) */
-        .left-sidebar {
-            flex: 0 0 25%; 
-            background-color: var(--primary);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 2.5rem;
-            position: sticky;
-            top: 0;
-        }
-
-        .sidebar-inner {
-            text-align: center;
-            width: 100%;
-        }
-
-        .nav-brand {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary-light);
-            display: block;
-            margin-bottom: 2rem;
-        }
-
-        .hero-photo {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-            border: 4px solid var(--white);
-            margin-bottom: 3.5rem;
-        }
-
-        .nav-links-vertical {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .nav-links-vertical a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.65);
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            display: block;
-            padding: 0.2rem 0;
-        }
-
-        .nav-links-vertical a:hover {
-            color: var(--white);
-            transform: translateX(6px);
-        }
-
-        /* ⚪ RIGHT HAND CONTENT PANEL (75% Width) */
-        .right-content-track {
-            flex: 0 0 75%; 
-            height: 100vh;
-            overflow-y: scroll; /* Handles seamless internal sliding scrollbars */
-            padding: 0;
-            scroll-behavior: smooth; /* Active animated slide gliding */
-        }
-
-        .scroll-section {
-            width: 100%;
-            min-height: 100vh; 
-            display: flex;
-            align-items: center;
-            padding: 6rem 5.5rem;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
-        .scroll-section:nth-child(even) { background-color: var(--light); }
-        .section-content { width: 100%; max-width: 850px; }
-        
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 2.5rem;
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 0.6rem;
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
         }
 
-        .section-content h1 { font-family: var(--font-serif); font-size: 3.8rem; color: var(--dark); margin-bottom: 1.5rem; }
-        .section-content h1 span { color: var(--primary); font-style: italic; }
-        .lead-text { font-size: 1.25rem; color: var(--gray); line-height: 1.75; margin-bottom: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
-        
-        .card {
+        .nav-brand { 
+            font-family: var(--font-serif); 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none;
+        } 
+
+        .nav-links-horizontal { 
+            list-style: none; 
+            display: flex; 
+            gap: 2rem; 
+        } 
+
+        .nav-links-horizontal a { 
+            text-decoration: none; 
+            color: var(--gray); 
+            font-weight: 500; 
+            font-size: 1.05rem; 
+            transition: var(--transition); 
+        } 
+
+        .nav-links-horizontal a:hover { 
+            color: var(--primary); 
+        } 
+
+        /* ── FULL-WIDTH CONTENT SECTION ENGINE ── */
+        .page-section { 
+            width: 100%; 
+            padding: 7rem 0; 
+            border-bottom: 1px solid rgba(0,0,0,0.04); 
+        } 
+
+        #home.page-section {
+            padding-top: 12rem; /* Clearances for fixed top nav */
             background-color: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: var(--transition);
         }
 
-        .card:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-color: rgba(15, 81, 50, 0.2); }
-        .card h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--dark); margin-bottom: 0.6rem; }
-        .card p { color: var(--gray); font-size: 0.98rem; line-height: 1.65; }
-        .tag { display: inline-block; background-color: var(--primary-light); color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.5px; }
-        .tech-list { margin-top: 1.2rem; font-size: 0.92rem; color: var(--dark); }
-        .btn { display: inline-block; padding: 0.8rem 2.2rem; background-color: var(--primary); color: var(--white); text-decoration: none; border-radius: 30px; font-weight: 500; transition: var(--transition); border: 2px solid var(--primary); box-shadow: 0 4px 15px rgba(15, 81, 50, 0.15); }
-        .btn:hover { background-color: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(25, 135, 84, 0.25); }
-        .text-center { text-align: center; }
-        .track-footer { padding: 3rem 5.5rem; background-color: var(--dark); color: rgba(255,255,255,0.4); font-size: 0.85rem; text-align: center; }
+        .page-section:nth-child(even) { 
+            background-color: var(--light); 
+        } 
 
-        @media (max-width: 950px) {
-            body { overflow: auto; }
-            .portfolio-container { flex-direction: column; height: auto; }
-            .left-sidebar { flex: 0 0 100%; width: 100%; height: auto; padding: 4rem 2rem; position: relative; }
-            .right-content-track { flex: 0 0 100%; width: 100%; height: auto; }
-            .scroll-section { min-height: auto; padding: 5rem 2rem; }
-            .hero-photo { margin-bottom: 2rem; }
+        .section-title { 
+            font-family: var(--font-serif); 
+            font-size: 2.6rem; 
+            color: var(--primary); 
+        } 
+
+        .section-content h1 { 
+            font-family: var(--font-serif); 
+            font-size: 3.8rem; 
+            color: var(--dark); 
+            margin-bottom: 1.5rem; 
+        } 
+
+        .section-content h1 span { 
+            color: var(--primary); 
+            font-style: italic; 
+        } 
+
+        .lead-text { 
+            font-size: 1.25rem; 
+            color: var(--gray); 
+            line-height: 1.8; 
+        } 
+
+        /* Shared Card Component */
+        .card { 
+            background-color: var(--white); 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.015); 
+            border: 1px solid rgba(0,0,0,0.04); 
+            transition: var(--transition); 
+            width: 100%;
+        } 
+
+        .card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 15px 35px rgba(15, 81, 50, 0.06); 
+            border-color: rgba(15, 81, 50, 0.15); 
+        } 
+
+        /* Tech Skills Layout Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 2rem; 
+        } 
+
+        .btn { 
+            display: inline-block; 
+            padding: 0.75rem 2rem; 
+            background-color: var(--primary); 
+            color: var(--white); 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: 500; 
+            transition: var(--transition); 
+            border: 2px solid var(--primary); 
+        } 
+
+        .btn:hover { 
+            background-color: var(--accent); 
+            border-color: var(--accent); 
+            transform: translateY(-2px); 
+        } 
+
+        .track-footer { 
+            padding: 4rem 0; 
+            background-color: var(--dark); 
+            color: rgba(255,255,255,0.4); 
+            font-size: 0.85rem; 
+            text-align: center; 
         }
-    </style>
-</head>
-<body>
 
-    <main class="portfolio-container">
-        
-        <!-- LEFT SIDEBAR PANEL -->
-        <aside class="left-sidebar">
-            <div class="sidebar-inner">
-                <span class="nav-brand">Tony Jin</span>
-                <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" />
-                <nav class="side-nav">
-                    <ul class="nav-links-vertical">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-                <!-- ⚪ RIGHT CONTINUOUS SCROLL TRACK -->
-        <section class="right-content-track">
-            
-<!-- SECTION 1: Home --> 
-<article id="home" class="scroll-section"> 
-  <div class="section-content"> 
-    <h1>Hi, I'm <span>Tony</span></h1> 
-    <p class="lead-text"> 
-      Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data. 
-    </p> 
+        /* 📱 CLEAN MOBILE TRANSLATION BREAKPOINT */
+        @media (max-width: 768px) { 
+            .nav-inner { 
+                flex-direction: column; 
+                height: auto; 
+                padding: 1.5rem 0; 
+                gap: 1rem; 
+            }
+            .nav-links-horizontal { 
+                gap: 1.5rem; 
+            }
+            .section-content h1 { 
+                font-size: 2.8rem; 
+            }
+            .page-section { 
+                padding: 5rem 0; 
+            }
+            #home.page-section { 
+                padding-top: 14rem; 
+            }
+        } 
+    </style> 
+</head> 
+<body> 
 
-    <!-- Action Buttons Group (All three now smoothly scroll down the page) --> 
-    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem;"> 
-      <a href="#projects" class="btn">View My Projects</a> 
-      <a href="#resume" class="btn">View Resume</a> 
-      <a href="#contact" class="btn">Contact Info</a>
-    </div>
-    </div>
-  </div> 
-</article>
+    <!-- ── 🟢 HORIZONTAL TOP NAVIGATION ── --> 
+    <nav>
+        <div class="container nav-inner">
+            <a href="#home" class="nav-brand">Tony Jin</a> 
+            <ul class="nav-links-horizontal"> 
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#projects">Projects</a></li> 
+                <li><a href="#resume">Resume</a></li> 
+                <li><a href="#contact">Contact</a></li> 
+            </ul> 
+        </div>
+    </nav> 
 
-            <!-- SECTION 2: PROJECTS -->
-            <article id="projects" class="scroll-section">
-                <div class="section-content">
-                    
-                    <!-- 🏷️ Updated Main Heading from "Laboratory Projects" to "Projects" -->
-                    <h2 class="section-title">Projects</h2>
-                    
-                    <!-- Minimalist Single Project Framework -->
-                    <div class="card" style="padding: 3rem; border-radius: 12px; width: 100%;">
-                        
-                        <!-- 🔬 PROJECT TITLE -->
-                        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1.2rem;">
-                            Sensor Development and Implementation Pipeline - Clarkson Unversity REU Program
-                        </h3>
-                        
-                        <!-- 📝 DESCRIPTION -->
-                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--gray);">
-                            An Undergrad research  experience to remove phosphate from aquatic systems that harms the ecosystem and reusing it as a fertilizer
-                            that helps for agriculture use. The goal to develop a material that can absorb phosphate, a chemical compound that can cause harm to 
-                            aquatic systems. At the same time, billions and billions of waste printed papers are everywhere throughout the world. In those papers, 
-                            there is a special compound known as cellulose that can detect phosphate and remove them from the sample. So, cellulose is extracted 
-                            from waste printed papers and then functionalized to increase the amount of absorption of phosphate. Analyzed with various instrument 
-                            to test the effect, this cost-effective method can be used as a fertilizer that benefits both the ecosystem and the economy.
-                        </p>
+    <!-- ── ⚪ MAIN HORIZONTAL CONTENT TRACK ── --> 
+    <main class="content-stream">
 
-                    </div>
+        <!-- SECTION 1: Home --> 
+        <article id="home" class="page-section"> 
+            <div class="container section-content"> 
+                <h1>Hi, I'm <span>Tony</span></h1> 
+                <p class="lead-text" style="margin-bottom: 2.5rem;"> 
+                    Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data. 
+                </p> 
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;"> 
+                    <a href="#projects" class="btn">View My Projects</a> 
+                    <a href="#resume" class="btn">View Resume</a> 
+                    <a href="#contact" class="btn">Contact Info</a> 
+                </div> 
+            </div> 
+        </article> 
 
+        <!-- SECTION 2: PROJECTS --> 
+        <article id="projects" class="page-section"> 
+            <div class="container section-content"> 
+                <div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;">
+                    <h2 class="section-title">Projects</h2> 
                 </div>
-            </article>
+                <div class="card" style="padding: 3rem;"> 
+                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); margin-bottom: 1.2rem;"> 
+                        Sensor Development and Implementation Pipeline - Clarkson University REU Program 
+                    </h3> 
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--gray);"> 
+                        An Undergrad research experience to remove phosphate from aquatic systems that harms the ecosystem and reusing it as a fertilizer that helps for agriculture use. The goal to develop a material that can absorb phosphate, a chemical compound that can cause harm to aquatic systems. At the same time, billions and billions of waste printed papers are everywhere throughout the world. In those papers, there is a special compound known as cellulose that can detect phosphate and remove them from the sample. So, cellulose is extracted from waste printed papers and then functionalized to increase the amount of absorption of phosphate. Analyzed with various instrument to test the effect, this cost-effective method can be used as a fertilizer that benefits both the ecosystem and the economy. 
+                    </p> 
+                </div> 
+            </div> 
+        </article> 
 
-            <!-- SECTION 3: RESUME (Dual-Entry CV Track with Inline Download Button) -->
-            <article id="resume" class="scroll-section">
-                <div class="section-content">
-                    
-<!-- 📥 INLINE HEADER BLOCK: Title, Subtitle, and Button Layout --> 
-<div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;"> 
-  
-  <!-- Main Title and Download Button Row -->
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
-    <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: var(--primary); margin: 0;">Resume</h2> 
-    <!-- 🟢 Capitalized 'T' to match your file exactly --> 
-    <a href="images/Tony's Resume.pdf" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.95rem; border-radius: 20px;">Download PDF</a> 
-  </div>
+        <!-- SECTION 3: RESUME MODULE --> 
+        <article id="resume" class="page-section"> 
+            <div class="container section-content"> 
+                
+                <div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;"> 
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;"> 
+                        <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: var(--primary); margin: 0;">Resume</h2> 
+                        <a href="images/Tony's Resume.pdf" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.95rem; border-radius: 20px;">Download PDF</a> 
+                    </div> 
+                    <p style="color: var(--gray); font-size: 1.1rem; font-weight: 400; margin: 0; letter-spacing: 0.3px;"> 
+                        Education &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Work Experience &nbsp;•&nbsp; Awards/Honors 
+                    </p> 
+                </div> 
 
-  <!-- 🟢 NEW Categories Subtitle Line -->
-  <p style="color: var(--gray); font-size: 1.1rem; font-weight: 400; margin: 0; letter-spacing: 0.3px;">
-    Education &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Work Experience &nbsp;•&nbsp; Awards/Honors
-  </p>
-
-</div> 
-
-<!-- Master Vertical Stack for Resume Categories --> 
-<div style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;"> 
-  <!-- 🎓 1. EDUCATION CARD (2 Entries) --> 
-  <div class="card" style="padding: 3rem; border-radius: 12px;"> 
-    <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Education</h3>
-                            
-<!-- Entry 1 -->
-<div style="margin-bottom: 1.5rem;">
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">B.S. in Chemistry</p>
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">
-        Binghamton University<br>
-        Expected Graduation: May 2028
-</p>
-</div>
-                            
-<!-- Entry 2: Previous College --> 
-<div style="margin-bottom: 2.5rem; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;"> 
-  <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">A.S. in Mathematics and A.S. in Physical Science</p> 
-  
-  <!-- 🟢 Single paragraph with <br> tags creates the perfect tight spacing you want -->
-  <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">
-    Jefferson Community College<br>
-    Graduated: May 2026<br>
-    GPA: 3.97<br>
-    Honors Program<br>
-    Relevant Coursework: General Chemistry I and II, Organic Chemistry I and II<br>
-    Calculus I, II and III, Differential Equations, General Physics I
-  </p> 
-</div>
-<!-- Entry 3: High School --> 
-<div style="margin-bottom: 1.5rem; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;"> 
-  <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Advanced Regents Diploma with Honors</p> 
-  
-  <!-- 🟢 Uses the exact same tight <br> spacing as your previous entries -->
-  <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">
-    South Jefferson Central School<br>
-    Graduated: June 2024<br>
-    Weighted GPA: 98.06%<br>
-    National Honor Society
-  </p>
-</div>
-                        </div>
-
-<!-- 🛠️ 2. TECHNICAL SKILLS CARD (Moved Up) --> 
-<div id="skills" class="card" style="padding: 3rem; border-radius: 12px; margin-bottom: 2.5rem;"> 
-  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Technical Skills</h3> 
-  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;"> 
-    <!-- Column 1 --> 
-    <div> 
-      <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Laboratory Tools</strong> 
-      <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;"> 
-        <strong>Instrumentation:</strong> <br>
-           • UV-Vis Spectroscopy<br>
-           • FTIR Spectroscopy<br> 
-           • SEM/EDX Analysis<br><br>
-        <strong>Software:</strong> <br>
-           • BIOVIA Draw<br>
-           • Microsoft Excel<br>
-           • Vernier Pro<br>
-           • PASCO Capstone<br>
-      </p> 
-    </div> 
-    <!-- Column 2 --> 
-    <div> 
-      <strong style="color: var(--dark); font-size: 1.05rem; display: block; margin-bottom: 0.5rem;">Methodologies &amp; Standards</strong> 
-      <p style="font-size: 1.05rem; color: var(--gray); line-height: 1.6;"> 
-        <strong>Procedures:</strong> <br>
-           • Thin Layer Chromatography<br> 
-           • Liquid-Liquid Extraction<br>
-           • Reflux Distillations<br>
-           • Titration/Solution Preparation
-
-      </p> 
-    </div> 
-  </div> 
-</div>
-
-<!-- 🔬 3. WORK EXPERIENCE CARD (Moved Down) --> 
-<div id="experience" class="card" style="padding: 3rem; border-radius: 12px;"> 
-  <!-- 1. Changed Title Text --> 
-  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Work Experience</h3> 
-  <!-- Entry 1: SDIP REU Researcher -->
-  <div style="margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">SDIP REU Researcher</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;"> 
-      Clarkson University &middot; May 2026 - August 2026<br> 
-      An Undergrad research experience that focuses on developing a material sensor that is cost-effective, sufficient, and biodegradable to remove phosphate from aquatic systems. Analyzed with instrumentation and various techniques to determine the factors. 
-    </p> 
-  </div> 
-
-  <!-- Entry 2: Joint Research Collaboration (Equalized spacing with top padding) --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Joint Research Collaboration</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"> 
-      Jefferson Community College &middot; October 2025 - August 2026<br> 
-      A joint research experience between Jefferson Community College and Clarkson University. The goal of this project is to extract pectin from banana peels, a biodegradable chemical that can then be functionalized to capture metals such as Pb<sup>2+</sup> or Hg<sup>2+</sup> from water solutions. This project is still an ongoing process. 
-    </p> 
-  </div> 
-
-  <!-- Entry 3: Lab Science Department Assistant (Equalized spacing) --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Lab Science Department Assistant</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"> 
-      Jefferson Community College &middot; September 2024 - May 2026<br> 
-      A work study opportunity on campus that enhances my ability to handle chemicals and equipment. I prepared various laboratory setups for experiments as well as chemicals and instruments such as UV-Vis Spectrometer, solution preparation, and organizing materials. 
-    </p> 
-  </div> 
-
-  <!-- Entry 4: Peer Tutor (Equalized spacing) --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Peer Tutor</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;"> 
-      Jefferson Community College &middot; May 2025 - May 2026<br> 
-      I worked with various students on various courses such as Algebra, General Chemistry I and II, Precalculus, Calculus, and Statistics on problem solving and exam preparation. </p> 
-  </div> 
-</div> <!-- Closes the entire Work Experience card -->
-    
-<!-- 🏆 4. AWARDS & HONORS CARD --> 
-<div id="honors" class="card" style="padding: 3rem; border-radius: 12px; margin-top: 2.5rem;"> 
-  <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 0.5rem;">Awards &amp; Honors</h3> 
-
-  <!-- Entry 1 --> 
-  <div style="margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">SUNY Chancellor's Award for Student Excellence</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; April 2026</p> 
-  </div> 
-
-  <!-- Entry 2 --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">President's List</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; May 2024 - May 2026</p> 
-  </div> 
-
-  <!-- Entry 3 --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Outstanding Physical Science Chemistry Student</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; May 2026</p> 
-  </div> 
-
-  <!-- Entry 4 --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">Outstanding Mathematics and Statistics Student</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; May 2026</p> 
-  </div> 
-
-  <!-- Entry 5 --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem; margin-bottom: 2rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">NYSMATYC Scholarship</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; April 2026</p> 
-  </div> 
-
-  <!-- Entry 6 --> 
-  <div style="border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;"> 
-    <p style="font-size: 1.15rem; font-weight: 600; color: var(--dark);">First Year Outstanding Student</p> 
-    <p style="color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 0.25rem; line-height: 1.5;">Jefferson Community College &middot; May 2025</p> 
-  </div> 
-
-</div>
-
-
-</div> 
-<!-- 🛑 Leave the remaining closing tags at the very bottom of your file: </div> 
-
-
-<!-- SECTION 4: CONTACT --> 
-<article id="contact" class="scroll-section"> 
-  <div class="section-content"> 
-    <h2 class="section-title">Get In Touch</h2> 
-    
-    <!-- Top Introduction Text -->
-    <p class="lead-text" style="margin-bottom: 2.5rem;">
-      Open to internships, research collaborations, and interesting conversations.
-    </p>
-
-    <!-- Find Me Online Section Header (Optional) -->
-    <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--primary); margin-bottom: 1.5rem;">Contact Information</h3>
-
-    <!-- Two Separate Stacked Boxes -->
-    <div style="display: flex; flex-direction: column; gap: 1.5rem; width: 100%;">
-
-      <!-- Box 1: Email -->
-      <div class="card" style="padding: 2.5rem; border-radius: 12px;">
-        <h4 style="font-size: 1.2rem; color: var(--dark); margin-bottom: 0.4rem;">Email Address</h4>
-        <p style="color: var(--accent); font-weight: 500; font-size: 1rem; margin: 0;">
-          <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">
-            tjin@binghamton.edu
-          </a>
-        </p>
-      </div>
-
-<!-- Box 2: GitHub --> 
-<div class="card" style="padding: 2.5rem; border-radius: 12px;"> 
-  <h4 style="font-size: 1.2rem; color: var(--dark); margin-bottom: 0.4rem;">GitHub Repository</h4> 
-  <p style="color: var(--accent); font-weight: 500; font-size: 1rem; margin: 0;"> 
-    <!-- 🟢 Fixed: Added the missing slash right after .com -->
-    <a href="https://github.com" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);"> 
-      github.com/Tony-583 
-    </a> 
-  </p> 
-</div>
-
-    </div> <!-- Closes the stacked boxes container -->
-  </div> 
-</article> 
-
-<!-- Layout Track Footer Element --> 
-<footer class="track-footer"> 
-  <p>Tony Jin E-Portfolio &copy; Built with plain HTML &amp; CSS &mdash; Hosted via GitHub Pages.</p> 
-</footer> 
-
-<!-- Closes the main .portfolio-container wrapper safely -->
-</div> 
 
 </main> 
 </body> 
