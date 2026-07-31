@@ -1,269 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tony Jin — ePortfolio</title>
-    
-    <style>
-        /* ── 🛠️ PREMIUM SINGLE-COLUMN WIDE ENGINE ── */
-        @import url('https://googleapis.com');
-
-        :root { 
-            --primary: #0f5132;        /* Premium Lab Emerald Green */ 
-            --primary-light: #d1e7dd;  /* Soft Green Background Accent Tint */ 
-            --accent: #198754;         /* Interaction Link Green */ 
-            --dark: #212529;           /* Charcoal Text Element Color */ 
-            --light: #f8f9fa;          /* Crisp Alternating Panel Strip */ 
-            --white: #ffffff; 
-            --gray: #6c757d; 
-            --font-sans: 'Inter', sans-serif; 
-            --font-serif: 'Playfair Display', serif; 
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-        } 
-
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        } 
-
-        body { 
-            font-family: var(--font-sans); 
-            color: var(--dark); 
-            background-color: var(--white); 
-            line-height: 1.6;
-        } 
-
-        /* Frame container centering content horizontally */
-        .container {
-            width: 100%;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* ── NAVIGATION BAR (Fixed Horizontal Top Layout) ── */
-        nav {
-            background-color: var(--white);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .nav-brand { 
-            font-family: var(--font-serif); 
-            font-size: 1.8rem; 
-            font-weight: 700; 
-            color: var(--primary); 
-            text-decoration: none;
-        } 
-
-        .nav-links-horizontal { 
-            list-style: none; 
-            display: flex; 
-            gap: 2rem; 
-        } 
-
-        .nav-links-horizontal a { 
-            text-decoration: none; 
-            color: var(--gray); 
-            font-weight: 500; 
-            font-size: 1.05rem; 
-            transition: var(--transition); 
-        } 
-
-        .nav-links-horizontal a:hover { 
-            color: var(--primary); 
-        } 
-
-        /* ── FULL-WIDTH CONTENT SECTION ENGINE ── */
-        .page-section { 
-            width: 100%; 
-            padding: 7rem 0; 
-            border-bottom: 1px solid rgba(0,0,0,0.04); 
-        } 
-
-        #home.page-section {
-            padding-top: 12rem; /* Clearances for fixed top nav */
-            background-color: var(--white);
-        }
-
-        .page-section:nth-child(even) { 
-            background-color: var(--light); 
-        } 
-
-        .section-title { 
-            font-family: var(--font-serif); 
-            font-size: 2.6rem; 
-            color: var(--primary); 
-        } 
-
-        .section-content h1 { 
-            font-family: var(--font-serif); 
-            font-size: 3.8rem; 
-            color: var(--dark); 
-            margin-bottom: 1.5rem; 
-        } 
-
-        .section-content h1 span { 
-            color: var(--primary); 
-            font-style: italic; 
-        } 
-
-        .lead-text { 
-            font-size: 1.25rem; 
-            color: var(--gray); 
-            line-height: 1.8; 
-        } 
-
-        /* Shared Card Component */
-        .card { 
-            background-color: var(--white); 
-            border-radius: 12px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.015); 
-            border: 1px solid rgba(0,0,0,0.04); 
-            transition: var(--transition); 
-            width: 100%;
-        } 
-
-        .card:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 15px 35px rgba(15, 81, 50, 0.06); 
-            border-color: rgba(15, 81, 50, 0.15); 
-        } 
-
-        /* Tech Skills Layout Grid */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 2rem; 
-        } 
-
-        .btn { 
-            display: inline-block; 
-            padding: 0.75rem 2rem; 
-            background-color: var(--primary); 
-            color: var(--white); 
-            text-decoration: none; 
-            border-radius: 30px; 
-            font-weight: 500; 
-            transition: var(--transition); 
-            border: 2px solid var(--primary); 
-        } 
-
-        .btn:hover { 
-            background-color: var(--accent); 
-            border-color: var(--accent); 
-            transform: translateY(-2px); 
-        } 
-
-        .track-footer { 
-            padding: 4rem 0; 
-            background-color: var(--dark); 
-            color: rgba(255,255,255,0.4); 
-            font-size: 0.85rem; 
-            text-align: center; 
-        }
-
-        /* 📱 CLEAN MOBILE TRANSLATION BREAKPOINT */
-        @media (max-width: 768px) { 
-            .nav-inner { 
-                flex-direction: column; 
-                height: auto; 
-                padding: 1.5rem 0; 
-                gap: 1rem; 
-            }
-            .nav-links-horizontal { 
-                gap: 1.5rem; 
-            }
-            .section-content h1 { 
-                font-size: 2.8rem; 
-            }
-            .page-section { 
-                padding: 5rem 0; 
-            }
-            #home.page-section { 
-                padding-top: 14rem; 
-            }
-        } 
-    </style> 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Tony Jin — E-Portfolio</title> 
+    <link rel="stylesheet" href="css/style.css" /> 
 </head> 
 <body> 
 
-    <!-- ── 🟢 HORIZONTAL TOP NAVIGATION ── --> 
-    <nav>
-        <div class="container nav-inner">
-            <a href="#home" class="nav-brand">Tony Jin</a> 
-            <ul class="nav-links-horizontal"> 
-                <li><a href="#home">Home</a></li> 
+    <!-- ── Navigation ── --> 
+    <nav> 
+        <input type="checkbox" id="nav-toggle" /> 
+        <div class="nav-inner"> 
+            <span class="nav-brand">TonyJin.dev</span> 
+            <label class="nav-toggle-label" for="nav-toggle"> 
+                <span></span> 
+            </label> 
+            <ul class="nav-links"> 
+                <li><a href="index.html" class="active">Home</a></li> 
                 <li><a href="#projects">Projects</a></li> 
                 <li><a href="#resume">Resume</a></li> 
                 <li><a href="#contact">Contact</a></li> 
             </ul> 
-        </div>
+        </div> 
     </nav> 
 
-    <!-- ── ⚪ MAIN HORIZONTAL CONTENT TRACK ── --> 
-    <main class="content-stream">
-
-        <!-- SECTION 1: Home --> 
-        <article id="home" class="page-section"> 
-            <div class="container section-content"> 
-                <h1>Hi, I'm <span>Tony</span></h1> 
-                <p class="lead-text" style="margin-bottom: 2.5rem;"> 
-                    Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data. 
+    <!-- ── Hero ── --> 
+    <section class="hero"> 
+        <div class="container hero-inner"> 
+            <div class="hero-text"> 
+                <h1>Hi, I'm <span>Tony Jin</span></h1> 
+                <p> 
+                    Undergrad transfer student majoring in Chemistry at Binghamton University. I am dedicated to mastering analytical laboratory techniques, optimizing chemical reactions, and applying scientific theories to experimental data.
                 </p> 
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;"> 
+                <div class="hero-btns"> 
                     <a href="#projects" class="btn">View My Projects</a> 
-                    <a href="#resume" class="btn">View Resume</a> 
-                    <a href="#contact" class="btn">Contact Info</a> 
+                    <a href="images/Tony's Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a> 
+                </div> 
+                <div class="stats"> 
+                    <div class="stat"><strong>3.97</strong><span>JCC GPA</span></div> 
+                    <div class="stat"><strong>2</strong><span>Research Roles</span></div> 
+                    <div class="stat"><strong>2028</strong><span>Graduating</span></div> 
                 </div> 
             </div> 
-        </article> 
+            <img src="images/IMG_0498.jpeg" alt="Tony Jin Profile Photo" class="hero-photo" /> 
+        </div> 
+    </section> 
 
-        <!-- SECTION 2: PROJECTS --> 
-        <article id="projects" class="page-section"> 
-            <div class="container section-content"> 
-                <div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;">
-                    <h2 class="section-title">Projects</h2> 
-                </div>
-                <div class="card" style="padding: 3rem;"> 
-                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--primary); margin-bottom: 1.2rem;"> 
-                        Sensor Development and Implementation Pipeline - Clarkson University REU Program 
-                    </h3> 
-                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--gray);"> 
+    <!-- ── About / Projects ── --> 
+    <section id="projects" class="section section-alt"> 
+        <div class="container"> 
+            <h2 class="section-title">Featured Projects</h2> 
+            <p class="section-sub">Undergraduate research pipelines and eco-innovations.</p> 
+            
+            <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;"> 
+                <div class="card" style="padding: 2.5rem;"> 
+                    <h3>Sensor Development and Implementation Pipeline - Clarkson University REU Program</h3> 
+                    <p> 
                         An Undergrad research experience to remove phosphate from aquatic systems that harms the ecosystem and reusing it as a fertilizer that helps for agriculture use. The goal to develop a material that can absorb phosphate, a chemical compound that can cause harm to aquatic systems. At the same time, billions and billions of waste printed papers are everywhere throughout the world. In those papers, there is a special compound known as cellulose that can detect phosphate and remove them from the sample. So, cellulose is extracted from waste printed papers and then functionalized to increase the amount of absorption of phosphate. Analyzed with various instrument to test the effect, this cost-effective method can be used as a fertilizer that benefits both the ecosystem and the economy. 
                     </p> 
                 </div> 
             </div> 
-        </article> 
+        </div> 
+    </section> 
 
-        <!-- SECTION 3: RESUME MODULE --> 
-        <article id="resume" class="page-section"> 
-            <div class="container section-content"> 
-                
-                <div style="border-bottom: 2px solid var(--primary-light); padding-bottom: 1rem; margin-bottom: 2.5rem;"> 
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;"> 
-                        <h2 style="font-family: var(--font-serif); font-size: 2.6rem; color: var(--primary); margin: 0;">Resume</h2> 
-                        <a href="images/Tony's Resume.pdf" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.95rem; border-radius: 20px;">Download PDF</a> 
-                    </div> 
-                    <p style="color: var(--gray); font-size: 1.1rem; font-weight: 400; margin: 0; letter-spacing: 0.3px;"> 
-                        Education &nbsp;•&nbsp; Skills &nbsp;•&nbsp; Work Experience &nbsp;•&nbsp; Awards/Honors 
+    <!-- ── Resume ── --> 
+    <section id="resume" class="section"> 
+        <div class="container"> 
+            <h2 class="section-title">Academic & Lab Background</h2> 
+            <p class="section-sub">Education history, award profiles, and core training metrics.</p> 
+            
+            <div class="grid"> 
+                <div class="card"> 
+                    <h3>Education</h3> 
+                    <p>
+                        <strong>B.S. in Chemistry</strong><br>
+                        Binghamton University<br>
+                        Expected Graduation: May 2028<br><br>
+                        <strong>A.S. in Mathematics &amp; Physical Science</strong><br>
+                        Jefferson Community College<br>
+                        GPA: 3.97 &middot; Honors Program
                     </p> 
                 </div> 
+                <div class="card"> 
+                    <h3>Technical Skills</h3> 
+                    <p>
+                        <strong>Instrumentation:</strong><br>
+                        • UV-Vis Spectroscopy<br>
+                        • FTIR Spectroscopy<br>
+                        • SEM/EDX Analysis<br><br>
+                        <strong>Procedures:</strong><br>
+                        • Thin Layer Chromatography<br>
+                        • Reflux Distillations
+                    </p> 
+                </div> 
+                <div class="card"> 
+                    <h3>Awards &amp; Honors</h3> 
+                    <p>
+                        • SUNY Chancellor's Award for Student Excellence (2026)<br>
+                        • Outstanding Physical Science Chemistry Student<br>
+                        • President's List Academic Recognition
+                    </p> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
 
+    <!-- ── Footer / Contact ── --> 
+    <footer id="contact"> 
+        <p>Tony Jin E-Portfolio &copy; Built with plain HTML &amp; CSS &mdash; hosted free on GitHub Pages.</p> 
+        <p style="margin-top:.4rem;"> 
+            <a href="https://github.com" target="_blank">GitHub Profile</a> &nbsp;·&nbsp; 
+            <a href="mailto:tjin@binghamton.edu">tjin@binghamton.edu</a> 
+        </p> 
+    </footer> 
 
-</main> 
 </body> 
 </html>
