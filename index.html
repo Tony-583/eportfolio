@@ -162,14 +162,15 @@
         
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; } 
         .hero-photo { 
-            width: 280px;            /* Controls how wide the photo sits on your screen */
-            height: auto !important; /* 🛠️ FIXED: Automatically stretches the height so nothing is cropped */
+            width: 250px;            /* Your original portrait horizontal width */
+            height: 330px;           /* 🛠️ RESTORED: Your original tall height number */
             border-radius: 1rem;     
-            object-fit: normal;      /* Keeps the image raw and uncropped */
+            object-fit: cover;       /* Fills the 250x330 box evenly */
             border: 4px solid #ffffff; 
             flex-shrink: 0; 
             box-shadow: 0 10px 30px rgba(6, 78, 59, 0.08); 
         }
+
 
 
         .stats { display: flex; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; } 
