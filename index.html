@@ -58,39 +58,42 @@
             max-width: 100% !important;        
             margin: 0 auto; 
             padding: 0 4rem;                   
-            height: 4.2rem;                    
+            /* 🛠️ SLIGHT TWEAK: Lowered height from 4.2rem down to a sleek 3.8rem */
+            height: 3.8rem;                    
         } 
         
         .nav-logo-circle {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;                       
-            height: 50px;
+            /* 🛠️ SLIGHT TWEAK: Compacted bubble down from 50px to a sharp 44px */
+            width: 44px;                       
+            height: 44px;
             background-color: var(--accent-dark); 
             border-radius: 50%;                
             text-decoration: none !important;
             justify-self: start;               
-            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.18);
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.15);
             transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .nav-logo-circle span {
             color: #ffffff !important;         
-            font-size: 1.2rem;                 
+            /* 🛠️ SLIGHT TWEAK: Balanced font size to fit the 44px bubble perfectly */
+            font-size: 1.1rem;                 
             font-weight: 800;                  
             letter-spacing: -0.5px;
         }
 
         .nav-logo-circle:hover {
             background-color: var(--accent);   
-            transform: scale(1.08) translateY(-1px); 
-            box-shadow: 0 6px 16px rgba(21, 128, 61, 0.3);
+            transform: scale(1.06) translateY(-1px); 
+            box-shadow: 0 6px 14px rgba(21, 128, 61, 0.25);
         }
         
         .nav-links { 
             display: flex; 
-            gap: 3rem;                         
+            gap: 2.5rem;                       /* 📐 Slightly tighter spacing for a compact line */
             list-style: none; 
             justify-self: center;              
         } 
@@ -101,9 +104,10 @@
 
         .nav-links a { 
             color: var(--muted); 
-            font-size: 1.05rem;                
+            /* 🛠️ SLIGHT TWEAK: Shaved text down just a hair from 1.05rem to 0.98rem */
+            font-size: 0.98rem;                
             font-weight: 700; 
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;                 /* Tighter top/bottom padding to match the slim line */
             display: inline-block;
             transition: color .3s ease; 
             text-decoration: none !important;
@@ -119,24 +123,23 @@
             height: 3px;                       
             background-color: var(--accent);   
             border-radius: 2px;
-            transform: scaleX(0);              /* Line is completely hidden by default */
+            transform: scaleX(0);              
             transform-origin: right;           
             transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
 
-        /* 🛠️ THE FIX: Changes text color when mouse hovers OR when section is active constant */
+        /* Changes text color when mouse hovers OR when section is active constant */
         .nav-links a:hover, 
         .nav-links a.active { 
             color: var(--accent-dark) !important; 
         }
 
-        /* 🛠️ THE FIX: Expands the underline line on mouse hover OR keeps it permanent when class active is live */
+        /* Expands the underline line on mouse hover OR keeps it permanent when class active is live */
         .nav-links a:hover::after, 
         .nav-links a.active::after {
-            transform: scaleX(1) !important;   /* Expands line out to 100% full width visibility */
+            transform: scaleX(1) !important;   
             transform-origin: left !important; 
         }
-
 
 
         /* 5. INTERFACE BUTTON CONFIGURATIONS */ 
