@@ -166,8 +166,8 @@
             height: 400px;           /* 🛠️ BUMPED: Your updated taller height layout */
             border-radius: 1rem;     
             
-            /* 🛠️ CHANGED: Forces the browser to show 100% of your raw photo file inside the box with zero cropping */
-            object-fit: contain !important; 
+            /* 🛠️ THE BALANCE: Forces the photo to fill the 310x400 area completely with zero gaps and zero face-stretching */
+            object-fit: cover !important; 
             
             background-color: transparent; /* Ensures no weird boxes show up behind the image gaps */
             border: 4px solid #ffffff; 
