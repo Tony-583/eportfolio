@@ -196,6 +196,7 @@
         .card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; box-shadow: var(--shadow); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); } 
         .card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(20, 83, 45, 0.08); border-color: rgba(22, 163, 74, 0.25); } 
         .card h3 { margin-bottom: .75rem; font-size: 1.4rem; font-weight: 700; color: var(--text); } 
+        .card-date {color: var(--accent) !important;  font-size: 0.95rem; font-weight: 600; margin-top: -0.25rem; margin-bottom: 1rem;letter-spacing: 0.2px;display: block;}
         .card p { color: var(--muted); font-size: .98rem; line-height: 1.65; } 
 
         /* 🔬 VIRTUAL MOLECULE ARTWORK INTERACTION */ 
@@ -278,13 +279,17 @@
 
             <div class="grid">
                 
-                <div class="card">
-                    <h3>SDIP REU Research</h3>
-                    <h3>May - July 2026</h3>
-                    <p>Developed a biodegradable material to remove phosphate from aquatic systems, optimizing
-                    performance through pH, interferences, and adsorption isotherm testing. The material can be reused as a fertilizer,
-                    offering a safe, sustainable loop that returns the nutrients back to the soil.</p>
-                </div>
+<div class="card">
+    <h3>SDIP REU Research</h3>
+    
+    <!-- 🛠️ COMBINED SUBTITLE: Shows institution and date split cleanly on one line -->
+    <h4 class="card-date">Clarkson University &nbsp;&middot;&nbsp; May — July 2026</h4>
+    
+    <p>Developed a biodegradable material to remove phosphate from aquatic systems, optimizing
+    performance through pH, interferences, and adsorption isotherm testing. The material can be reused as a fertilizer,
+    offering a safe, sustainable loop that returns the nutrients back to the soil.</p>
+</div>
+
 
                 <div class="card">
                     <h3>Project Title 2</h3>
