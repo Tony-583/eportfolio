@@ -490,74 +490,33 @@
     <!-- ── Contact Section ── -->
     <section class="section" id="contact">
 <!-- ========================================== -->
-<!-- 🧪 INTERACTIVE EMAIL CONTACT FORM BAR      -->
+<!-- 🧪 EMBEDDED GOOGLE FORM CONTACT HUB        -->
 <!-- ========================================== -->
 <section id="contact" class="page-section">
     <div class="container">
         <h2 class="section-title">Get In Touch</h2>
         <div class="project-grid">
-<div class="card" style="padding: 2.5rem; max-width: 760px; margin: 0 auto;">
-    
-    <p style="color: var(--muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">
-        Email me at <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: underline !important;">tjin@binghamton.edu</a> or send a message using the form below.
-    </p>
+            
+            <!-- White card structural frame bounding the embedded element -->
+            <div class="card" style="padding: 1.5rem; max-width: 760px; margin: 0 auto; overflow: hidden;">
+                
+                <p style="color: var(--muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center;">
+                    Email me at <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: underline !important;">tjin@binghamton.edu</a> or send a message using the form below.
+                </p>
 
-    <!-- 🛠️ INTERACTIVE JAVASCRIPT LOCAL EMULATOR -->
-    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-            <!-- Field 1: Name -->
-            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                <label style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Your Name</label>
-                <input type="text" id="local-name" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd;">
+                <!-- 🛠️ GOOGLE FORM EMBED ENGINE: Seamless cross-origin transmission -->
+                <iframe src="https://google.com" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    style="border: none; display: block; background: transparent;">
+                    Loading contact form…
+                </iframe>
+
             </div>
-            <!-- Field 2: Email -->
-            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-                <label style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Email Address</label>
-                <input type="email" id="local-email" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd;">
-            </div>
-        </div>
 
-        <!-- Field 3: Subject -->
-        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-            <label style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Subject Line</label>
-            <input type="text" id="local-subject" required style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd;">
-        </div>
-
-        <!-- Field 4: Message -->
-        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-            <label style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Message</label>
-            <textarea id="local-message" rows="5" required placeholder="Type your message here..." style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; resize: vertical;"></textarea>
-        </div>
-
-        <!-- Submit Trigger -->
-        <div style="text-align: center; margin-top: 0.5rem;">
-            <button onclick="sendLocalEmail()" class="btn btn-dark" style="cursor: pointer; width: 100%; max-width: 220px; padding: 0.8rem 2rem; border: none;">
-                Send Message
-            </button>
-        </div>
-
-    </div>
-</div>
-
-<!-- Add this script right before your closing body tag -->
-<script>
-function sendLocalEmail() {
-    const name = document.getElementById('local-name').value;
-    const email = document.getElementById('local-email').value;
-    const subject = document.getElementById('local-subject').value;
-    const msg = document.getElementById('local-message').value;
-    
-    if(!name || !email || !subject || !msg) {
-        alert('Please fill out all fields before sending.');
-        return;
-    }
-    
-    // Formats the text safely for email client consumption
-    const emailBody = `Hi Tony,%0D%0A%0D%0A${msg}%0D%0A%0D%0AFrom: ${name}%0D%0AContact: ${email}`;
-    window.open(`mailto:tjin@binghamton.edu?subject=${encodeURIComponent(subject)}&body=${emailBody}`);
-}
-</script>
         </div>
     </div>
 </section>
