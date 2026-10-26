@@ -374,120 +374,116 @@
 <hr class="section-divider" />
     <!-- ── Resume ── -->
 <!-- ========================================== -->
-<!-- 🧪 UNIFIED MASTER RESUME CARD PROFILE      -->
+<!-- 🧪 SIDE-BY-SIDE RESUME DASHBOARD MATRIX   -->
 <!-- ========================================== -->
 <section id="resume" class="page-section">
     <div class="container">
         <h2 class="section-title">Academic & Professional Resume</h2>
-        <div class="project-grid">
+        
+        <!-- 📐 GRID CONTROLLER: Forces a 3-column side-by-side array on desktop, stacks on mobile -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start;">
             
-            <!-- THE MASTER CARD FRAME -->
-            <div class="card" style="padding: 3rem;">
-
-                <!-- 🎓 PILLAR 1: EDUCATION PROFILE -->
-                <div style="margin-bottom: 2.5rem;">
-                    <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.4rem;">Academic Background</h3>
-                    
-                    <div style="margin-bottom: 1.25rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">Binghamton University</strong>
-                            <h4 class="card-date">Expected May 2028</h4>
-                        </div>
-                        <p style="color: var(--muted); font-weight: 600;">B.S. in Chemistry — Undergraduate Transfer Student</p>
+            <!-- COLUMN CARD 1: EDUCATION -->
+            <div class="card" style="padding: 2.2rem; display: flex; flex-direction: column; height: 100%;">
+                <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.3rem;">Academic Background</h3>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">Binghamton University</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">Expected 2028</h4>
                     </div>
-
-                    <div style="margin-bottom: 1.25rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">Jefferson Community College</strong>
-                            <h4 class="card-date">Graduated May 2026</h4>
-                        </div>
-                        <p style="color: var(--muted); font-weight: 600; margin-bottom: 0.5rem;">A.S. in Mathematics & A.S. in Physical Science</p>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li><strong>Academic Record:</strong> 3.97 Cumulative GPA | Honors Program Graduate</li>
-                            <li><strong>Relevant Coursework:</strong> General Chemistry I & II, Organic Chemistry I & II, Calculus I, II, & III, Differential Equations, General Physics I</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">South Jefferson Central School</strong>
-                            <h4 class="card-date">Graduated June 2024</h4>
-                        </div>
-                        <p style="color: var(--muted); font-weight: 600; margin-bottom: 0.5rem;">Advanced Regents Diploma with Honors</p>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li><strong>Academic Record:</strong> 98.06% Weighted Average | National Honor Society Member</li>
-                        </ul>
-                    </div>
+                    <p style="color: var(--muted); font-size: 0.95rem; font-weight: 600;">B.S. in Chemistry — Undergrad Transfer</p>
                 </div>
 
-                <!-- 💼 PILLAR 2: WORK EXPERIENCE -->
-                <div style="margin-bottom: 2.5rem;">
-                    <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.4rem;">Work & Leadership Experience</h3>
-                    
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">Lab Science Department Assistant</strong>
-                            <h4 class="card-date">September 2024 — May 2026</h4>
-                        </div>
-                        <p style="color: var(--muted); font-weight: 600; margin-bottom: 0.5rem;">Jefferson Community College</p>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li>Assembled complex experimental apparatuses and managed overall laboratory logistics.</li>
-                            <li>Handled raw reagent dilution and standardized precise volumetric testing solutions.</li>
-                            <li>Calibrated analytical departmental hardware tools including UV-Vis spectrometers.</li>
-                        </ul>
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">Jefferson CC</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">Grad 2026</h4>
                     </div>
-
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.25rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">STEM Peer Tutor</strong>
-                            <h4 class="card-date">May 2025 — May 2026</h4>
-                        </div>
-                        <p style="color: var(--muted); font-weight: 600; margin-bottom: 0.5rem;">Jefferson Community College</p>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li>Guided student peers through targeted conceptual problem-solving workflows across Math and Chemistry tracks.</li>
-                            <li>Provided structured academic support across Algebra, Precalculus, Calculus I, II, & III, and Statistics.</li>
-                            <li>Tutored general chemistry concepts, reaction mechanisms, and foundational lab theory.</li>
-                        </ul>
-                    </div>
+                    <p style="color: var(--muted); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem;">A.S. Math & A.S. Physical Science</p>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>3.97 GPA | Honors Program</li>
+                        <li>Organic Chem & Diff Equations matrix</li>
+                    </ul>
                 </div>
 
-                <!-- 🏆 PILLAR 3: AWARDS & HONORS -->
                 <div>
-                    <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.4rem;">Awards & Academic Honors</h3>
-                    
-                    <div style="margin-bottom: 1.25rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">SUNY Chancellor's Award for Student Excellence</strong>
-                            <h4 class="card-date">April 2026</h4>
-                        </div>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--text);">The highest student honor awarded across the State University of New York system, recognizing integrated excellence across academics, leadership, and campus contributions.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">South Jefferson HS</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">Grad 2024</h4>
                     </div>
+                    <p style="color: var(--muted); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem;">Advanced Regents with Honors</p>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>98.06% Weighted Average</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <div style="margin-bottom: 1.25rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">Departmental Excellence Accolades</strong>
-                            <h4 class="card-date">May 2026</h4>
-                        </div>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li><strong>Outstanding Physical Science Chemistry Student:</strong> Top ranking departmental honors.</li>
-                            <li><strong>Outstanding Mathematics and Statistics Student:</strong> Recognized for multi-variable mathematics excellence.</li>
-                        </ul>
+            <!-- COLUMN CARD 2: EXPERIENCE -->
+            <div class="card" style="padding: 2.2rem; display: flex; flex-direction: column; height: 100%;">
+                <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.3rem;">Work & Leadership</h3>
+                
+                <div style="margin-bottom: 1.75rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">Lab Science Assistant</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">2024 — 2026</h4>
                     </div>
-
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                            <strong style="font-size: 1.15rem; color: var(--text);">Scholarships & Dean's List Recognitions</strong>
-                            <h4 class="card-date">2024 — 2026</h4>
-                        </div>
-                        <ul style="list-style-type: disc; padding-left: 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--text);">
-                            <li><strong>NYSMATYC Statewide Mathematics Scholarship:</strong> Awarded by the New York State Mathematics Association of Two-Year Colleges (April 2026).</li>
-                            <li><strong>President's List Academic Recognition:</strong> Earned continuously every semester from May 2024 through May 2026.</li>
-                            <li><strong>First Year Outstanding Academic Student Award:</strong> Achieved in May 2025.</li>
-                        </ul>
-                    </div>
+                    <p style="color: var(--muted); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem;">Jefferson Community College</p>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>Assembled experimental apparatus matrices.</li>
+                        <li>Executed raw reagent stock dilutions.</li>
+                        <li>Calibrated analytical UV-Vis hardware.</li>
+                    </ul>
                 </div>
 
-            </div> <!-- END MASTER CARD -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="font-size: 1.05rem; color: var(--text);">STEM Peer Tutor</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">2025 — 2026</h4>
+                    </div>
+                    <p style="color: var(--muted); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem;">Jefferson Community College</p>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>Guided target problem-solving workflows.</li>
+                        <li>Supported Multi-Variable Calculus tracks.</li>
+                        <li>Tutored foundational chemistry lab theory.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COLUMN CARD 3: AWARDS -->
+            <div class="card" style="padding: 2.2rem; display: flex; flex-direction: column; height: 100%;">
+                <h3 style="color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.3rem;">Awards & Honors</h3>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">SUNY Chancellor's Award</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">Apr 2026</h4>
+                    </div>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text);">Highest student honor awarded across the state system for integrated academic and leadership excellence.</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">Departmental Honors</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">May 2026</h4>
+                    </div>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>Outstanding Physical Science Chem Student</li>
+                        <li>Outstanding Math & Statistics Student</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
+                        <strong style="color: var(--text);">Scholarships & Lists</strong>
+                        <h4 class="card-date" style="font-size: 0.85rem; padding: 0.2rem 0.6rem;">2024 — 2026</h4>
+                    </div>
+                    <ul style="list-style-type: disc; padding-left: 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--text);">
+                        <li>NYSMATYC Statewide Math Scholarship</li>
+                        <li>Continuous President's List Standing</li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </div>
