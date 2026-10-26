@@ -324,31 +324,39 @@
     <!-- ── Skills ── -->
 <section id="skills" class="page-section">
     <div class="container">
-        <h2 class="section-title">Technical Skills & Lab Methodologies</h2>
-        <div class="project-grid">
+        <h2 class="section-title">Technical Skills</h2>
+        
+        <!-- Grid configured to auto-wrap into full-width rows when screens shrink -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
             
-            <div class="card">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; padding: 0.5rem 0;">
-                    
-                    <!-- CATEGORY 1 -->
-                    <div>
-                        <h4 class="card-date" style="display: inline-block; margin-bottom: 1rem; border-radius: 6px;">Analytical Instrumentation</h4>
-                        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">UV-Vis Spectroscopy, FTIR Spectroscopy, SEM/EDX Analysis</p>
-                    </div>
-                    
-                    <!-- CATEGORY 2 -->
-                    <div>
-                        <h4 class="card-date" style="display: inline-block; margin-bottom: 1rem; border-radius: 6px;">Laboratory Methodologies</h4>
-                        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">Thin Layer Chromatography (TLC), Liquid-Liquid Extraction, Reflux Distillations, Exact Titration, Analytical Solution Preparation</p>
-                    </div>
-                    
-                    <!-- CATEGORY 3 -->
-                    <div>
-                        <h4 class="card-date" style="display: inline-block; margin-bottom: 1rem; border-radius: 6px;">Scientific Software</h4>
-                        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">BIOVIA Draw, Microsoft Excel, Vernier Pro, PASCO Capstone</p>
-                    </div>
-
+            <!-- CARD 1: INSTRUMENTATION -->
+            <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="margin-bottom: 1.25rem;">
+                    <h4 class="card-date" style="display: inline-block;">Analytical Instrumentation</h4>
                 </div>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text); margin: 0;">
+                    UV-Vis Spectroscopy, FTIR Spectroscopy, and SEM/EDX Structural Analysis.
+                </p>
+            </div>
+            
+            <!-- CARD 2: METHODOLOGIES -->
+            <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="margin-bottom: 1.25rem;">
+                    <h4 class="card-date" style="display: inline-block;">Laboratory Methodologies</h4>
+                </div>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text); margin: 0;">
+                    Thin Layer Chromatography (TLC), Liquid-Liquid Extraction, Reflux Distillations, Exact Titration validation, and Volumetric Solution Standardization.
+                </p>
+            </div>
+            
+            <!-- CARD 3: SOFTWARE -->
+            <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="margin-bottom: 1.25rem;">
+                    <h4 class="card-date" style="display: inline-block;">Scientific Software</h4>
+                </div>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text); margin: 0;">
+                    BIOVIA Draw molecular modeling, Microsoft Excel analytical modeling, Vernier Pro, and PASCO Capstone digital data capture matrices.
+                </p>
             </div>
 
         </div>
