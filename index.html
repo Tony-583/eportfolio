@@ -496,21 +496,19 @@
     <div class="container">
         <h2 class="section-title">Get In Touch</h2>
         <div class="project-grid">
-            
-            <!-- Compact card container layout -->
             <div class="card" style="padding: 2.5rem; max-width: 760px; margin: 0 auto;">
                 
-                <!-- 🛠️ STREAMLINED SUBTITLE: Clear and direct alternative messaging -->
                 <p style="color: var(--muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">
                     Email me at <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: underline !important;">tjin@binghamton.edu</a> or send a message using the form below.
                 </p>
 
+                <!-- 🛠️ CRITICAL FIX: The parent form element and POST method are fully restored -->
                 <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
                     
-                    <!-- 📐 RESPONSIVE ROW: Side-by-side on desktop, stacks vertically on mobile -->
+                    <!-- Side-by-Side Responsive Row -->
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                         
-                        <!-- Field 1: Name -->
+                        <!-- Name Field -->
                         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                             <label for="name" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Your Name</label>
                             <input type="text" id="name" name="name" required
@@ -519,7 +517,7 @@
                                 onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
                         </div>
 
-                        <!-- Field 2: Email -->
+                        <!-- Email Field -->
                         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                             <label for="email" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Email Address</label>
                             <input type="email" id="email" name="_replyto" required
@@ -530,7 +528,7 @@
 
                     </div>
 
-                    <!-- Field 3: Subject Line -->
+                    <!-- Subject Field -->
                     <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                         <label for="subject" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Subject Line</label>
                         <input type="text" id="subject" name="subject" required
@@ -539,7 +537,7 @@
                             onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
                     </div>
 
-                    <!-- Field 4: Message -->
+                    <!-- Message Field -->
                     <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                         <label for="message" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Message</label>
                         <textarea id="message" name="message" rows="5" required placeholder="Type your message here..." 
@@ -548,19 +546,19 @@
                             onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';"></textarea>
                     </div>
 
-                    <!-- Submit Action Button -->
+                    <!-- Submit Button -->
                     <div style="text-align: center; margin-top: 0.5rem;">
-                        <button type="submit" class="btn btn-dark" style="cursor: pointer; width: 100%; max-width: 220px; padding: 0.8rem 2rem;">
+                        <button type="submit" class="btn btn-dark" style="cursor: pointer; width: 100%; max-width: 220px; padding: 0.8rem 2rem; border: none;">
                             Send Message
                         </button>
                     </div>
 
                 </form>
             </div>
-
         </div>
     </div>
 </section>
+
 
     <!-- ── 🛠️ PERFECT RESYNCED SCROLL TRACKER SCRIPT ── -->
     <script>
