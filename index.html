@@ -502,15 +502,18 @@
         Email me at <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: underline !important;">tjin@binghamton.edu</a> or send a message using the form below.
     </p>
 
-    <!-- 🛠️ ENFORCED METHOD CONTAINER -->
-    <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+    <!-- 🛠️ ZERO SETUP ENGINE: Put your email directly in the action link -->
+    <form action="https://formsubmit.co" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
         
+        <!-- Hidden optimization tags to customize the submission experience -->
+        <input type="hidden" name="_captcha" value="false"> <!-- Turns off annoying puzzles -->
+        <input type="hidden" name="_next" value="https://github.io"> <!-- Redirects back to your site -->
+
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
             
             <!-- Field 1: Name -->
             <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                 <label for="name" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Your Name</label>
-                <!-- 🛠️ RESTORED: name="name" -->
                 <input type="text" id="name" name="name" required
                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;">
             </div>
@@ -518,8 +521,7 @@
             <!-- Field 2: Email -->
             <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                 <label for="email" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Email Address</label>
-                <!-- 🛠️ RESTORED: name="_replyto" -->
-                <input type="email" id="email" name="_replyto" required
+                <input type="email" id="email" name="email" required
                     style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;">
             </div>
 
@@ -528,7 +530,6 @@
         <!-- Field 3: Subject Line -->
         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
             <label for="subject" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Subject Line</label>
-            <!-- 🛠️ RESTORED: name="subject" -->
             <input type="text" id="subject" name="subject" required
                 style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;">
         </div>
@@ -536,7 +537,6 @@
         <!-- Field 4: Message -->
         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
             <label for="message" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Message</label>
-            <!-- 🛠️ RESTORED: name="message" -->
             <textarea id="message" name="message" rows="5" required placeholder="Type your message here..." 
                 style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; resize: vertical; transition: all 0.3s ease;"></textarea>
         </div>
