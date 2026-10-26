@@ -497,53 +497,60 @@
         <h2 class="section-title">Get In Touch</h2>
         <div class="project-grid">
             
-            <div class="card" style="padding: 3rem; max-width: 720px; margin: 0 auto;">
+            <!-- Compact card container layout -->
+            <div class="card" style="padding: 2.5rem; max-width: 760px; margin: 0 auto;">
+                
+                <!-- 🛠️ STREAMLINED SUBTITLE: Clear and direct alternative messaging -->
                 <p style="color: var(--muted); font-size: 1.05rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">
-                    Have an opportunity or research inquiry? Send a direct message straight to my inbox.
+                    Email me at <a href="mailto:tjin@binghamton.edu" style="color: var(--accent); text-decoration: underline !important;">tjin@binghamton.edu</a> or send a message using the form below.
                 </p>
 
-                <!-- Form redirects straight to your Binghamton mail client framework -->
-                <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
                     
-                    <!-- Row 1: Sender Name -->
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <label for="name" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe" 
-                            style="width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
+                    <!-- 📐 RESPONSIVE ROW: Side-by-side on desktop, stacks vertically on mobile -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                        
+                        <!-- Field 1: Name -->
+                        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label for="name" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
+                                onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+                        </div>
+
+                        <!-- Field 2: Email -->
+                        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label for="email" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Email Address</label>
+                            <input type="email" id="email" name="_replyto" required
+                                style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
+                                onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
+                                onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
+                        </div>
+
+                    </div>
+
+                    <!-- Field 3: Subject Line -->
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="subject" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Subject Line</label>
+                        <input type="text" id="subject" name="subject" required
+                            style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
                             onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
                             onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
                     </div>
 
-                    <!-- Row 2: Sender Email -->
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <label for="email" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Email Address</label>
-                        <input type="email" id="email" name="_replyto" required placeholder="you@example.com" 
-                            style="width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
-                            onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
-                            onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
-                    </div>
-
-                    <!-- Row 3: Subject Line -->
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                        <label for="subject" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Subject</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Research Inquiry / Internship Opportunity" 
-                            style="width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; transition: all 0.3s ease;"
-                            onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
-                            onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';">
-                    </div>
-
-                    <!-- Row 4: Message Payload Block -->
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <!-- Field 4: Message -->
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                         <label for="message" style="color: var(--accent-dark); font-weight: 700; font-size: 0.95rem;">Message</label>
                         <textarea id="message" name="message" rows="5" required placeholder="Type your message here..." 
-                            style="width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; resize: vertical; transition: all 0.3s ease;"
+                            style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font); font-size: 1rem; color: var(--text); background: #fdfdfd; resize: vertical; transition: all 0.3s ease;"
                             onfocus="this.style.borderColor='var(--accent)'; this.style.outline='none'; this.style.boxShadow='0 0 0 3px rgba(21, 128, 61, 0.1)';"
                             onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none';"></textarea>
                     </div>
 
-                    <!-- Row 5: Action Submit Engine -->
+                    <!-- Submit Action Button -->
                     <div style="text-align: center; margin-top: 0.5rem;">
-                        <button type="submit" class="btn btn-dark" style="cursor: pointer; width: 100%; max-width: 240px; padding: 0.85rem 2rem;">
+                        <button type="submit" class="btn btn-dark" style="cursor: pointer; width: 100%; max-width: 220px; padding: 0.8rem 2rem;">
                             Send Message
                         </button>
                     </div>
